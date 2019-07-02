@@ -1,7 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Root from './components/root';
+
+import * as SessionApiUtils from './util/session_api_util';
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
-    ReactDOM.render(<h1>Airbnb clone Lets gooo</h1>, root);
+
+    //TESTING
+    window.logout = SessionApiUtils.logout;
+    window.login = SessionApiUtils.login;
+    window.signup = SessionApiUtils.signup;
+    //TESTING 
+
+    ReactDOM.render(<Root />, root);
 });
