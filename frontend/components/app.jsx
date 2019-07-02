@@ -1,18 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import {
-    Route,
-    Redirect,
-    Switch,
-    Link,
-    HashRouter
-} from 'react-router-dom';
+import GreetingContainer from './greeting/greeting_container';
 
 
 const App = () => (
     <div>
-        <h1>Airbnb clone Lets gooo</h1>
+        <header>
+            <h1>AirBnB Clone Let's go</h1>
+            <GreetingContainer />
+        </header>
     </div>
 );
-
 export default App;
