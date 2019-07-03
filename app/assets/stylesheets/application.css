@@ -13,3 +13,325 @@
  *= require_tree .
  *= require_self
  */
+
+ .body {
+     background-color: aliceblue;
+ }
+
+ .login-form-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: flex-start;
+}
+
+.login-signup{
+    align-self: center;
+    a{
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+        text-decoration: none;
+        h2{
+            font-weight: 100;
+            font-size: 1.8vh;
+        }
+    }
+}
+
+.dark {
+    color: #444;
+}
+
+.login-signup > button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 2vh;
+    color:black;
+    text-decoration: none;
+    margin-right: 30px;
+    background: none;
+    border: none;
+}
+
+.login-signup > button:hover {
+    cursor: pointer;
+}
+
+.login-form > .error {
+    text-align: center;
+    padding: 0px;
+    color: red;
+    min-width: 70%;
+    margin: -10px 0px -10px 0px;
+    font-size: 12px;
+}
+
+
+.login-form-box{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius:3px;
+    justify-content: center;
+    max-width: 75%;
+
+}
+.login-form-box > * {
+    min-width: 100%;
+    text-align: center;
+}
+
+.login-form-box > .login-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.login-form-box > .login-form > label {
+    
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 70%;
+    margin-bottom: 5px;
+}
+
+/* .search-form-box {
+     font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius:3px;
+    justify-content: center;
+    max-width: 82%;
+}
+
+.search-form-box > .search-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-form-box > .search-form > label {
+    
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+} */
+
+
+.login-form p {
+    padding: 5px 0px 0px 15%;
+    margin-bottom: 5px;
+    color: #AEAEAE;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+
+}
+
+.login-form-box > a {
+    padding-bottom: 20px;
+}
+
+.login-form-box > h3 {
+    font-size: 2.5vh;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.login-form p:first-child {
+    margin-top: 10px;
+}
+
+.login-form > label > input {
+    background-color: white;
+    border: 1px solid #aeaeae6b;
+    min-width: 97%;
+    color: #bbbbbb;
+    margin: 10px auto 10px auto;
+    padding: 22px 0px 20px 15px;
+    border-radius: 3px;
+   
+}
+
+.login-form input[type=email] {
+    margin-top: 3vw;
+}
+
+.login-form .session-submit:first-of-type {
+    margin-top: .5vw;
+}
+
+.login-form > label > input:focus {
+    outline: none;
+    border: 2px solid #3844A2;
+    color:black;
+    box-shadow: none;
+}
+
+.login-form > input:last-of-type {
+    margin-bottom: 30px;
+}
+
+.thin-line{
+    margin: -.5vw auto .5vw auto;
+    height: .25px;
+    min-width: 70%;
+    border: .5px solid #d2d2d2a1;
+}
+
+.session-submit{ 
+    min-width: 70%;
+    margin: 30px auto 15px auto ;
+    padding: 15px 20px 15px 20px;
+    border-radius:3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.6vh;
+    color: white;
+    background: rgb(255, 90, 95);
+    text-align: center;
+    transition: .5s all ease;
+}
+.session-submit:hover{
+    background: rgb(223, 76, 81);
+    cursor: pointer;
+}
+
+.demo:hover{
+    background: #0f2f66;
+}
+
+.session-submit[type="text"] {
+    text-align: center !important;
+}
+
+.demo {
+    background: #133979;
+    margin: -.01vw 0px 1vw 0px;
+    transition: .5s all ease;
+}
+
+.close-button {     
+    margin: 1% 0 -8% 90%;
+    padding-top:1px;
+    min-width: 40px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: 2rem;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 5rem;
+    background-color: #ffffff00;
+    color: #8d8d8d;
+    border: 1.5px solid #c7c2c252;
+    transition: all .5s ease;
+}
+
+.close-button:hover{
+    background-color: #cececea8;
+}
+
+.login-form-box ul {
+    margin-left: -5%;
+    list-style: none;
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.login-form-box ul > li {
+    padding-bottom: 2px;
+}
+
+
+/// MODAL STYLES ///
+
+
+.modal-switch {
+    padding: 0px 10% 20px 10%;
+    background: none;
+    border:none;
+    color:rgb(26, 153, 196);
+    font-size: 1.5vh;
+    text-decoration: none;
+}
+
+.modal-switch:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.modal-switch:focus, textarea {
+    border: none;
+    outline: none;
+}
+
+/* .modal-background {
+    opacity: 0;
+    -webkit-transition: opacity 0.6s cubic-bezier(0.18, 0.63, 0.38, 0.91);
+    -moz-transition: opacity 0.6s cubic-bezier(0.18, 0.63, 0.38, 0.91);
+    -ms-transition: opacity 0.6s cubic-bezier(0.18, 0.63, 0.38, 0.91);
+    -o-transition: opacity 0.6s cubic-bezier(0.18, 0.63, 0.38, 0.91);
+    transition: opacity 0.6s cubic-bezier(0.18, 0.63, 0.38, 0.91);
+    position: absolute;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.modal-child {
+    opacity: 0;
+    -webkit-transition: opacity, transform 0.8s cubic-bezier(0.18, 0.63, 0.38, 0.91);
+    -moz-transition: opacity, transform 0.8s cubic-bezier(0.18, 0.63, 0.38, 0.91);
+    -ms-transition: opacity, transform 0.8s cubic-bezier(0.18, 0.63, 0.38, 0.91);
+    -o-transition: opacity, transform 0.8s cubic-bezier(0.18, 0.63, 0.38, 0.91);
+    transition: opacity, transform 0.8s cubic-bezier(0.18, 0.63, 0.38, 0.91);
+    position: absolute;
+    margin: 12vh 25% 15% 25%;
+    transform: scale(0.9);
+} */
+
+.visible {
+    opacity: 1;
+    transform: scale(1.0);
+
+}
+
+ .login-form-box > .login-form > .date {
+    min-width: 20%;
+    max-width: 39%;
+}
+
+ .modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
