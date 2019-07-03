@@ -64,7 +64,7 @@ class SessionForm extends React.Component {
                         
                         
                         <div>
-                        You can also {this.props.otherForm}
+                        If you want {this.props.otherForm}
                         </div>
                     </div>
                 </form>

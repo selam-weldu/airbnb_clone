@@ -5,10 +5,15 @@ import GreetingContainer from './greeting/greeting_container';
 
 const App = () => (
     <div>
-        <Modal />
-        <header>
-            <GreetingContainer />
-        </header>
+        <div class="main-container">
+            <div class="nav-bar">
+                <div class="logo">Logo</div>
+                <Modal />
+            </div>
+            <header>
+                <GreetingContainer />
+            </header>
+        </div>
     </div>
 );
 

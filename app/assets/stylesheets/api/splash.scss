@@ -1,0 +1,39 @@
+.main-container {
+    background-image:url(https://a0.muscache.com/4ea/air/v2/pictures/b7ca8f0c-030a-401a-a3a6-fc3d50f3425f.jpg?t=c:3w-h2-gw,r:w3100-h2074-sfit,e:fjpg-c80);
+    background-size: cover;
+    height: 100vh;
+    width: 100vm;
+}
+
+.logo {
+    margin-top: -3vw;
+    width: 30vw;
+    height: 10vw;
+    background-size: 25vw 14vw;
+    min-width: 100px;
+    background-image: url(https://s3-us-west-2.amazonaws.com/mybnb-seeds/LogoLg_v1.png);
+    background-position-x: 34%;
+    background-repeat: no-repeat;
+}
+
+.nav-bar > div {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.login-signup > button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 2vh;
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+    background: none;
+    border: none;
+}
+
+.login-signup > button:hover {
+    cursor: pointer;
+}
