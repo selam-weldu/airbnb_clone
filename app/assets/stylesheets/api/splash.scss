@@ -24,6 +24,35 @@
   justify-content: space-between;
 }
 
+.header-group {
+    height: 10vw;
+    padding: 10px;
+    margin: initial;
+    vertical-align: middle;
+}
+.header-group > button {
+    font-family: 'Circular', '-apple-system', 'BlinkMacSystemFont', 'Roboto', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.43;
+    color: white;
+    margin-right: 30px;
+    background: none;
+    border: none;
+    margin-top: 10px;
+}
+
+.header-group > button:hover {
+    cursor: pointer;
+}
+
+
+// .nav-bar {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+// }
+
 .login-signup {
     height: 10vw;
     padding: 10px;
