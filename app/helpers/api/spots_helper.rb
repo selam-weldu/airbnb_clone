@@ -1,0 +1,2 @@
+module Api::SpotsHelper
+end
