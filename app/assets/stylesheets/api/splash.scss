@@ -16,12 +16,15 @@
     background-repeat: no-repeat;
 }
 
-.nav-bar > div {
-    display: flex;
-    flex-direction: row;
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-
+// .nav-bar > div {
+//   justify-content: space-around;
+// }
 
 .login-signup > button {
     font-family: 'Montserrat', sans-serif;
