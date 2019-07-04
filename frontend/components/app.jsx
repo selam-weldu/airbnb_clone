@@ -7,7 +7,7 @@ const App = () => (
     <div>
         <div className="main-container">
             <div className="nav-bar">
-                <div className="logo">Logo</div>
+                <div className="logo"></div>
                 <Modal />
             <header>
                 <GreetingContainer />
