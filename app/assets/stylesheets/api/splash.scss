@@ -14,8 +14,9 @@
     background-image: url(http://logok.org/wp-content/uploads/2014/07/airbnb-logo-belo-880x628.png);
     background-position-x: 30%;
     background-position-y: bottom;
-    transform: rotate(180deg);
+    // transform: rotate(180deg);
 }
+
 
 .nav-bar {
   display: flex;
@@ -27,11 +28,13 @@
     height: 10vw;
     padding: 10px;
     margin: initial;
+    vertical-align: middle;
 }
 .login-signup > button {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 2vh;
+    font-family: 'Circular', '-apple-system', 'BlinkMacSystemFont', 'Roboto', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.43;
     color: white;
     margin-right: 30px;
     background: none;
@@ -41,4 +44,5 @@
 
 .login-signup > button:hover {
     cursor: pointer;
+    text-decoration: underline; 
 }

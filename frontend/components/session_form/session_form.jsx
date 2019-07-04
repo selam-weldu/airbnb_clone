@@ -35,6 +35,18 @@ class SessionForm extends React.Component {
         );
     }
 
+    footerText(){
+        if(this.props.formType === 'signup'){
+            return(
+                <p>Already have an account?</p>
+            )
+        } else {
+            return(
+                <p>Create an account?</p>
+            )
+        }
+    }
+
     render() {
         return (
             <div className="login-form-container">
@@ -42,29 +54,33 @@ class SessionForm extends React.Component {
                     
                     <div onClick={this.props.closeModal} className="close-x">X</div>
                     {this.renderErrors()}
+                    <div className="form-logo-header"></div>
                     <div className="login-form">
                         <br />
-                        <label>Username:
+                        <label>
                             <input type="text"
                                 value={this.state.username}
                                 onChange={this.update('username')}
                                 className="login-input"
+                                placeholder="Enter Username"
                             />
                         </label>
                         <br />
-                        <label>Password:
+                        <label>
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="login-input"
+                                placeholder="Enter Password"
                             />
                         </label>
                         <br />
                         <input className="session-submit" type="submit" value={this.props.formType} />
                         
                         
-                        <div>
-                        If you want {this.props.otherForm}
+                        <div className="session-footer">
+                          {this.footerText()}
+                          <p>{this.props.otherForm}</p>
                         </div>
                     </div>
                 </form>
