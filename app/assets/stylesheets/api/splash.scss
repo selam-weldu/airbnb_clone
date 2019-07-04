@@ -1,17 +1,20 @@
 .main-container {
     background-image:url(https://a0.muscache.com/4ea/air/v2/pictures/b7ca8f0c-030a-401a-a3a6-fc3d50f3425f.jpg?t=c:3w-h2-gw,r:w3100-h2074-sfit,e:fjpg-c80);
+    // background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,1));
     background-size: cover;
     height: 100vh;
     width: 100vm;
+    background-position: center;
 }
 
 .logo {
-    width: 20vw;
-    height: 8vw;
-    background-size: 18vw 10vw;
+    width: 10vw;
+    height: 6vw;
+    background-size: 10vw 6vw;
     background-image: url(http://logok.org/wp-content/uploads/2014/07/airbnb-logo-belo-880x628.png);
     background-position-x: 30%;
     background-position-y: bottom;
+    transform: rotate(180deg);
 }
 
 .nav-bar {
@@ -22,6 +25,8 @@
 
 .login-signup {
     height: 10vw;
+    padding: 10px;
+    margin: initial;
 }
 .login-signup > button {
     font-family: 'Montserrat', sans-serif;
