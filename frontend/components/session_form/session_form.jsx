@@ -13,6 +13,9 @@ class SessionForm extends React.Component {
         this.handleDemoLogin = this.handleDemoLogin.bind(this);
     }
 
+    componentWillMount(){
+        this.props.removeErrors();
+    }
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
@@ -21,8 +24,9 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // const user = Object.assign({}, this.state);
-        this.props.processForm(this.state).then(this.props.closeModal);
+        this.props.processForm(this.state)
+            .then(this.props.closeModal);
+            // .then(this.props.errors.fill(""));
     }
 
     handleDemoLogin(e) {
@@ -31,8 +35,7 @@ class SessionForm extends React.Component {
             username: 'sweldu',
             password: 'password'
         };
-        this.props.processForm(demoUser)
-            .then(() => this.props.closeModal());
+        this.props.processForm(demoUser).then(() => this.props.closeModal());
     }
 
     // async demoLogin(e) {
@@ -65,7 +68,7 @@ class SessionForm extends React.Component {
     //     document.getElementById('password').blur();
     // }
 
-    renderErrors() {
+    handleErrors() {
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
@@ -75,6 +78,14 @@ class SessionForm extends React.Component {
                 ))}
             </ul>
         );
+
+        // let errors = this.props.errors;
+
+        // let idx = errors.findIndex(error => error.includes(str))
+
+        // return (
+        //     <li key={idx}> {errors[idx]} </li>
+        //     );
     }
 
     footerText(){
@@ -113,7 +124,7 @@ class SessionForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     
                     <div onClick={this.props.closeModal} className="close-x">X</div>
-                    {this.renderErrors()}
+                    {this.handleErrors()}
                     <div className="form-logo-header"></div>
                     <div className="login-form">
                         <br />
