@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+// import 'babel-polyfill' from 'babel-polyfill';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -9,6 +10,7 @@ class SessionForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoLogin = this.handleDemoLogin.bind(this);
     }
 
     update(field) {
@@ -22,6 +24,46 @@ class SessionForm extends React.Component {
         // const user = Object.assign({}, this.state);
         this.props.processForm(this.state).then(this.props.closeModal);
     }
+
+    handleDemoLogin(e) {
+        e.preventDefault();
+        const demoUser = {
+            username: 'sweldu',
+            password: 'password'
+        };
+        this.props.processForm(demoUser)
+            .then(() => this.props.closeModal());
+    }
+
+    // async demoLogin(e) {
+    //     e.preventDefault();
+
+    //     const demoUser = {
+    //         username: 'sweldu',
+    //         password: 'password'
+    //     };
+
+    //     const sleep = ms => new Promise(res => setTimeout(res, ms));
+
+    //     document.getElementById('username').focus();
+    //     for (let i = 1; i <= demoUser.username.length; i++) {
+    //         this.setState({ username: demoUser.username.substr(0, i) });
+    //         await sleep(50);
+    //     }
+
+    //     await sleep(250);
+
+    //     document.getElementById('password').focus();
+    //     for (let i = 1; i <= demoUser.password.length; i++) {
+    //         this.setState({ password: demoUser.password.substr(0, i) });
+    //         await sleep(50);
+    //     }
+
+    //     await sleep(250);
+
+    //     document.getElementById('session-submit-demo').click();
+    //     document.getElementById('password').blur();
+    // }
 
     renderErrors() {
         return (
@@ -47,6 +89,24 @@ class SessionForm extends React.Component {
         }
     }
 
+
+    headerButton(){
+        if(this.props.formType === 'signup'){
+            return(
+                <p>Signup!</p>
+            )
+        } else {
+            return(
+                <label>
+                    <input type="text"
+                        value="Log in with Google"
+                        className="login-input"
+                    />
+                </label>
+            )
+        }
+    }
+
     render() {
         return (
             <div className="login-form-container">
@@ -57,8 +117,10 @@ class SessionForm extends React.Component {
                     <div className="form-logo-header"></div>
                     <div className="login-form">
                         <br />
+                        {/* {this.headerButton()} */}
                         <label>
                             <input type="text"
+                                id="username"
                                 value={this.state.username}
                                 onChange={this.update('username')}
                                 className="login-input"
@@ -68,6 +130,7 @@ class SessionForm extends React.Component {
                         <br />
                         <label>
                             <input type="password"
+                                id="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 className="login-input"
@@ -75,15 +138,22 @@ class SessionForm extends React.Component {
                             />
                         </label>
                         <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />
-                        
-                        
+                        <input className="session-submit" 
+                            type="submit" 
+                            value={this.props.formType} />
+
+                        <input className="session-submit-demo"
+                            type="submit"
+                            value="Demo Login"
+                            onClick={this.handleDemoLogin}
+                        />
+                          
+                    </div>
                         <div className="session-footer">
                             <div className="thin-line"></div>
                             {this.footerText()}
                           <p>{this.props.otherForm}</p>
                         </div>
-                    </div>
                 </form>
             </div>
         );

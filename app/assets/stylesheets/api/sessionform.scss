@@ -161,7 +161,7 @@
 /////////////// session-submit ////////////////////
 
 
-.session-submit, input[type=submit], input[type=button]{ 
+.session-submit{ 
     background: rgb(255, 90, 95);
     min-width: 70%;
     padding: 15px 20px 15px 20px;
@@ -182,6 +182,21 @@
     cursor: pointer;
 }
 
+.session-submit-demo {
+    background: rgb(40, 125, 191);
+    min-width: 70%;
+    padding: 15px 20px 15px 20px;
+    margin: 0px auto 15px auto ;
+    color: white;
+    border-radius:3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.6vh;
+    text-align: center;
+    transition: .5s all ease;
+    border:none;
+}
+
 // .session-submit[type="text"] {
 //     text-align: center !important;
 // }
@@ -198,6 +213,14 @@
     border: .5px solid #d2d2d2a1;
     margin-bottom: 20px;
 }
+
+// .thin-line-demo {
+//     margin: -.5vw auto .5vw auto;
+//     height: .25px;
+//     min-width: 70%;
+//     border: .5px solid #d2d2d2a1;
+//     margin-bottom: 20px;   
+// }
 
 .session-footer > p{
     display: inline;
