@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-// import 'babel-polyfill' from 'babel-polyfill';
+
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -84,7 +84,7 @@ class SessionForm extends React.Component {
             )
         } else {
             return(
-                <p>Create an account?</p>
+                <p>Create a new account or do whatever </p>
             )
         }
     }
@@ -117,7 +117,7 @@ class SessionForm extends React.Component {
                     <div className="form-logo-header"></div>
                     <div className="login-form">
                         <br />
-                        {/* {this.headerButton()} */}
+ 
                         <label>
                             <input type="text"
                                 id="username"

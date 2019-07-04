@@ -4,7 +4,6 @@ import NavbarContainer from './navbar/navbar_container';
 
 
 const App = () => (
-    <div>
         <div className="main-container">
             <div className="nav-bar">
                 <div className="logo"></div>
@@ -14,7 +13,6 @@ const App = () => (
                 </header>
             </div>
         </div>
-    </div>
 );
 
 export default App;
