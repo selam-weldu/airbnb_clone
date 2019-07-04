@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from './modal/modal';
-import GreetingContainer from './greeting/greeting_container';
+import NavbarContainer from './navbar/navbar_container';
 
 
 const App = () => (
@@ -9,9 +9,9 @@ const App = () => (
             <div className="nav-bar">
                 <div className="logo"></div>
                 <Modal />
-            <header>
-                <GreetingContainer />
-            </header>
+                <header>
+                    <NavbarContainer />
+                </header>
             </div>
         </div>
     </div>

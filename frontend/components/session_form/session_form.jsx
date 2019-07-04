@@ -79,7 +79,8 @@ class SessionForm extends React.Component {
                         
                         
                         <div className="session-footer">
-                          {this.footerText()}
+                            <div className="thin-line"></div>
+                            {this.footerText()}
                           <p>{this.props.otherForm}</p>
                         </div>
                     </div>
