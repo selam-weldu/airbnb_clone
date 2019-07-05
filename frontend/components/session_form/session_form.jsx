@@ -33,7 +33,7 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const demoUser = {
             username: 'sweldu',
-            password: 'password'
+            password: 'password',
         };
         this.props.processForm(demoUser).then(() => this.props.closeModal());
     }
@@ -72,23 +72,19 @@ class SessionForm extends React.Component {
         }
     }
 
-
-    headerButton(){
-        if(this.props.formType === 'signup'){
-            return(
-                <p>Signup!</p>
-            )
-        } else {
-            return(
-                <label>
-                    <input type="text"
-                        value="Log in with Google"
-                        className="login-input"
-                    />
-                </label>
+    demoUserButton() {
+        if (this.props.formType === 'login') {
+            return (
+                <input className="session-submit-demo"
+                    type="submit"
+                    value="Demo Login"
+                    onClick={this.handleDemoLogin}
+                />
             )
         }
     }
+
+
 
     render() {
         return (
@@ -126,11 +122,8 @@ class SessionForm extends React.Component {
                             type="submit" 
                             value={this.props.formType} />
 
-                        <input className="session-submit-demo"
-                            type="submit"
-                            value="Demo Account"
-                            onClick={this.handleDemoLogin}
-                        />
+                        
+                        {this.demoUserButton()}
                           
                     </div>
                         <div className="session-footer">
