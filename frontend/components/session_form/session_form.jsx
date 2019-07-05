@@ -38,35 +38,7 @@ class SessionForm extends React.Component {
         this.props.processForm(demoUser).then(() => this.props.closeModal());
     }
 
-    // async demoLogin(e) {
-    //     e.preventDefault();
 
-    //     const demoUser = {
-    //         username: 'sweldu',
-    //         password: 'password'
-    //     };
-
-    //     const sleep = ms => new Promise(res => setTimeout(res, ms));
-
-    //     document.getElementById('username').focus();
-    //     for (let i = 1; i <= demoUser.username.length; i++) {
-    //         this.setState({ username: demoUser.username.substr(0, i) });
-    //         await sleep(50);
-    //     }
-
-    //     await sleep(250);
-
-    //     document.getElementById('password').focus();
-    //     for (let i = 1; i <= demoUser.password.length; i++) {
-    //         this.setState({ password: demoUser.password.substr(0, i) });
-    //         await sleep(50);
-    //     }
-
-    //     await sleep(250);
-
-    //     document.getElementById('session-submit-demo').click();
-    //     document.getElementById('password').blur();
-    // }
 
     handleErrors() {
         return (
@@ -95,7 +67,7 @@ class SessionForm extends React.Component {
             )
         } else {
             return(
-                <p>Create a new account or do whatever </p>
+                <p>Create a new account! </p>
             )
         }
     }
@@ -123,7 +95,8 @@ class SessionForm extends React.Component {
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     
-                    <div onClick={this.props.closeModal} className="close-x">X</div>
+                    <div onClick={this.props.closeModal} className="close-x">&times;</div>
+                    {/* <div onClick={this.props.closeModal} className="close-x">X</div> */}
                     {this.handleErrors()}
                     <div className="form-logo-header"></div>
                     <div className="login-form">
@@ -155,7 +128,7 @@ class SessionForm extends React.Component {
 
                         <input className="session-submit-demo"
                             type="submit"
-                            value="Demo Login"
+                            value="Demo Account"
                             onClick={this.handleDemoLogin}
                         />
                           
@@ -163,7 +136,7 @@ class SessionForm extends React.Component {
                         <div className="session-footer">
                             <div className="thin-line"></div>
                             {this.footerText()}
-                          <p>{this.props.otherForm}</p>
+                          <p className="other-form-button">{this.props.otherForm}</p>
                         </div>
                 </form>
             </div>

@@ -92,15 +92,19 @@
 //////// closing x //////////////////
 
 .close-x {
-    margin: 1px 0 -8px -4%;
+    // margin: 1px 0 -8px -4%;
+    margin-left: 5px;
+    margin-top: 8px;
+    margin-right: 425px;
     padding-top: 1px;
     padding-left: inherit;
     min-width: 30px;
-    height: 40px;
+    font-size: xx-large;
+    // font-size: 14px;
     align-items: flex-start;
     display: block;
     justify-content: flex-start;
-    line-height: 2rem;
+    // line-height: 2rem;
     cursor: pointer;
     z-index: 3;
     border-radius: 5rem;
@@ -174,6 +178,7 @@
     text-align: center;
     transition: .5s all ease;
     border:none;
+    text-transform: capitalize;
 }
 
 
@@ -224,21 +229,23 @@
 
 .session-footer > p{
     display: inline;
-    // overflow-wrap: break-word !important;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-    // font-size: 16px !important;
-    // font-weight: 400 !important;
-    // line-height: 1.375em !important;
-    // color: rgb(72, 72, 72) !important;
-    // margin: 0px !important;
-    padding: 0px 10% 20px 10%;
-    background: none;
-    border: none;
-    color: #1a99c4;
-    font-size: 1.5vh;
-    text-decoration: none;
-    text-align: inherit;
-    padding: 0px 5% 20px 0%;
+    // font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    // padding: 0px 10% 20px 10%;
+    // background: none;
+    // border: none;
+    // color: #1a99c4;
+    // font-size: 14px;
+    // text-decoration: none;
+    // text-align: inherit;
+    // padding: 0px 5% 20px 0%;
+
+    overflow-wrap: break-word;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375em;
+    color: rgb(72, 72, 72);
+    margin: 0px;
 }
 
 ///////////////////////////////////////////////////////
@@ -258,6 +265,15 @@
 }
 
 .login-signup > button:hover {
+    cursor: pointer;
+}
+
+.other-form-button > button {
+    color: rgb(0, 132, 137);
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    font-size: large;
     cursor: pointer;
 }
 
