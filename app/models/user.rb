@@ -22,6 +22,8 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_one_attached :photo
+  
   has_many :spots,
     foreign_key: :host_id,
     class_name: :Spot

@@ -13,6 +13,6 @@ class Api::SpotsController < ApplicationController
     
     private
     def spot_params
-        params.require(:spot).permit(:id)
+        params.require(:spot).permit(,photos: [])
     end
 end
