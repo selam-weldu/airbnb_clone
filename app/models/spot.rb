@@ -28,7 +28,7 @@
 
 class Spot < ApplicationRecord
 
-    validates :title, :host_id, :price, :location, :longitude, :latitude, presence: true
+    validates :title, :host_id, :price, :location, :latitude, :longitude, presence: true
 
 
     has_many_attached :photos

@@ -1,5 +1,5 @@
 # This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# The data can then be loaded with the rails db:seed command (or create alongside the database with db:setup).
 #
 # Examples:
 #
@@ -8,6 +8,7 @@
 
 
 ActiveRecord::Base.transaction do
+  
   User.destroy_all
  
   User.create(
@@ -166,6 +167,7 @@ ActiveRecord::Base.transaction do
       fname: 'Nikki',
       bio: "Hi, I'm Nikki! Whether you are traveling to San Francisco for a night or two, or are coming for a month or more, I can help you find the perfect clean and stylishly furnished place to call home."
   )
+
   User.create(
       username: 'pepynpat',
       password: 'password',
@@ -188,7 +190,7 @@ ActiveRecord::Base.transaction do
 
 
   User.create(
-      username: 'helen2011'
+      username: 'helen2011',
       password: 'password',
       fname: 'Helen',
       bio: "Hi, I'm Helen! I am a Personal Assistant at a tech company."
@@ -196,14 +198,14 @@ ActiveRecord::Base.transaction do
 
 
   User.create(
-      username: 'ehoward'
+      username: 'ehoward',
       password: 'password',
       fname: 'Emma',
       bio: "Hi, I'm Emma! I am based out of San Francisco and work in market research my specialty is the pharmaceutical industry. Married and have 3 girls."
   )
 
   User.create(
-      username: 'mcgreg'
+      username: 'mcgreg',
       password: 'password',
       fname: 'Greg',
       bio: "Hi, I'm Greg! I'm a software engineer and manager, my wife is a designer and simple-living consultant. We are east coast natives but have lived in SF since 2000 and love the California way of life. To us, that's doing urban hikes around our gorgeous hilly city, eating farm-fresh food, crafting mezcal or whisky cocktails in the evening, listening to indie rock, meditating, and enjoying the company of our 1-year-old son."
@@ -234,15 +236,654 @@ ActiveRecord::Base.transaction do
     username: 'sweldu',
     password: 'password',
     fname: 'Selam',
-    bio: ''
+    bio: "Hi, I'm Selam! I am a software engineer with an insatiable curiosity to learn new technologies and apply capabilities to solve problems."
   )
 
   User.create(
-    username: 'sweldu',
+    username: 'ssweldu',
     password: 'password',
     fname: 'Selam',
-    bio: '',
+    bio: "Hi, I'm Selam! I am a software engineer with an insatiable curiosity to learn new technologies and apply capabilities to solve problems."
   )
+
+
+# attaching user photos
+
+  User.all.each_with_index do |user, idx|
+    if idx < 9
+      file = EzDownload.open("https://waterbnb-seed.s3-us-west-1.amazonaws.com/users/0#{idx+1}-user.jpg")
+      user.photo.attach(io: file, filename: "0#{idx+1}-user.jpg")
+      user.save! if user.photo.attached?
+    else 
+      file = EzDownload.open("https://waterbnb-seed.s3-us-west-1.amazonaws.com/users/0#{idx+1}-user.jpg")
+      user.photo.attach(io: file, filename: "#{idx+1}-user.jpg")
+      user.save! if user.photo.attached?
+    end
+  end
+
+
+  # Spots
+
+  Spot.destroy_all
+
+  Spot.create(
+    title: "Downtown SF Studio Apartment Near Civic Center",
+    description: "Explore the heart of San Francisco from this designer studio. Unwind in this boutique, open-concept space with carefully selected decor or gaze out across the city from the rooftop terrace with 360-degree views, a BBQ, and a seating area.",
+    num_guests: 3,
+    num_bedrooms: 1,
+    num_beds: 1,
+    num_baths: 1,
+    listing_type: 'studio', 
+    price: 150,
+    location: "San Francisco, California, United States",
+    loc_detail: "The building is located in the Civic Center area, in the middle of town, and is equal distance to all of the nightlife options and places of interest. Discover the city with close access to the water and the iconic Mission District.",
+    latitude: 37.7856652,
+    longitude: -122.4070889,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  )
+
+  Spot.create(
+    title: "Explore Valencia Street from a Room in a Serene Condo",
+    description: "Relax in a beautiful, bright room in chic and calm condo in the vibrant Mission District, and explore local restaurant scene. Room has its own TV with Netflix and Hulu, and has an adjacent private bathroom just for guests. While the neighborhood is busy, the guest bedroom is not street facing and is quiet. Walk to Dolores Park, Castro, and Hayes Valley. Easy Uber or Bart ride from the airport! Please read useful info in the House Rules section below (scroll all the way down), including check-in information and parking details. A very sweet and quiet boston terrier (@petitepokey) lives here.",
+    num_guests: 2,
+    num_bedrooms: 1,
+    num_beds: 1,
+    num_baths: 1,
+    listing_type: "private bedroom",
+    price: 150,
+    location: "San Francisco, California, United States",
+    loc_detail: "Condo is steps away from some of the most popular restaurants, shops, a supermarket, & public transportation (including BART). That said, SF is a small city best explored on foot! *Please* *read* parking/check-in info in the House Rules. Dog at home.",
+    latitude: 37.76016,
+    longitude: -122.41929,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  )
+
+   Spot.create(
+    title: "Amazing Location with Breathtaking Bay Views",
+    description: "Enjoy 180° Bay views in the sunny living room at this hidden oasis in the heart of the city. Listen for foghorns, sea lions, and the clang of nearby cable cars. Sit at the sleek marble dining table and admire the eclectic art featured throughout.",
+    num_guests: 4,
+    num_bedrooms: 2,
+    num_beds: 2,
+    num_baths: 2,
+    listing_type: "whole apartment",
+    price: 185,
+    location: "San Francisco, California, United States",
+    loc_detail: "Nestled in North Beach, this is the place to be. Voted one of the country's Top 10 neighborhoods, it's walkable to downtown, the Wharf, Union Square, Lombard, Chinatown, and more. You're close to lovely cafes, great bars and fantastic restaurants.",
+    latitude: 37.7982,
+    longitude: -122.41183,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Contemporary Apartment in Potrero Hill",
+    description: "Enjoy stunning views of the city at this renovated hilltop hideaway in one of San Francisco's sunniest neighborhoods. Marvel at the view while washing dishes in the fully equipped kitchen or while kicking back with coffee on the sunny balcony.",
+    num_guests: 3,
+    num_bedrooms: 1,
+    num_beds: 1,
+    num_baths: 3,
+    listing_type: "whole apartment",
+    price: 225,
+    location: "San Francisco, California, United States",
+    loc_detail: "Experience authentic San Francisco in Potrero Hill. Enjoy both old and new by taking a walk down cobblestone paths that date before the 1906 quake, leading to some of the city's most vibrant restaurants and shops.",
+    latitude: 37.75308,
+    longitude: -122.40149,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Stretch out in This Modern San Francisco Loft",
+    description: "Relax in this authentic and thoughtfully decorated loft. The vibrant, open living room boasts 16-foot ceilings and sprawling windows letting in natural light. Admire original artwork, high end furniture and luxuries like a smart TV, and full kitchen.",
+    num_guests: 4,
+    num_bedrooms: 2,
+    num_beds: 2,
+    num_baths: 2,
+    listing_type: "whole apartment",
+    price: 205,
+    location: "San Francisco, California, United States",
+    loc_detail: "The loft is located within walking distance to downtown and the Moscone center—SOMA has a walk score of 97! There are plenty of great bars and award winning restaurants within walking distance, as well as transport to all parts of the city.",
+    latitude: 37.77687,
+    longitude: -122.40916,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Fourth of July Penthouse with Views near Fisherman's Wharf",
+    description: "Enjoy close-up views of iconic landmarks from all living areas or have a family BBQ on the deck and admire the Golden Gate Bridge from there. On a chilly evening, gather everyone indoors for a warm meal and a movie.",
+    num_guests: 6,
+    num_bedrooms: 2,
+    num_beds: 3,
+    num_baths: 3,
+    listing_type: "whole house",
+    price: 799,
+    location: "San Francisco, California, United States",
+    loc_detail: "The house is located in North Beach/Telegraph Hill. It is perfectly centered between Pier 39, Fisherman's Wharf and North Beach (the Italian District). It's walking distance to Chinatown, Union Square, and the Financial District. Coit Tower is a few block away. Giants games, Boutique shopping, and world-class museums are just a short Uber ride away. And, if you just want to spend a day at home, relaxing, you'll find the top floor to be peaceful and calm high above the hustle and bustle of SF.",
+    latitude: 37.80264,
+    longitude: -122.41046,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Indulge in a Designer Victorian in Pacific Heights",
+    description: "Unwind in contemporary luxury in this spectacular 1900s Victorian home. The space offers the utmost privacy and instills a sense of peace and belonging with the large backyard, bright and modern kitchen, patio walkout, and designer furnishings.",
+    num_guests: 6,
+    num_bedrooms: 3,
+    num_beds: 4,
+    num_baths: 3,
+    listing_type: "whole house",
+    price: 800,
+    location: "San Francisco, California, United States",
+    loc_detail: "Regal mansions and prestigious buildings are the essence of Pacific Heights. This prim and proper neighborhood epitomizes old-world elegance. The quiet streets are mostly enlivened with passers-by appreciating its jaw-dropping architectural grandeur.",
+    latitude: 37.789,
+    longitude: -122.43939,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Stunning Family-Friendly House with Views in Noe Valley",
+    description: "Wake up in a bright bedroom and admire a postcard view of hillside houses from the window. This colorful, art-filled home is made for entertaining. Cook in a chef's kitchen, serve dinner at a formal table, and gather on orange cushions by a fire pit.",
+    num_guests: 8,
+    num_bedrooms: 3,
+    num_beds: 4,
+    num_baths: 3,
+    listing_type: "whole house",
+    price: 945,
+    location: "San Francisco, California, United States",
+    loc_detail: "Noe Valley is quaint and perfectly situated. Everything needed can be found within five blocks—from Whole Foods and upscale dining to neighborhood boutiques, cafes, and three MUNI lines. The 280 and 101 freeways are easily accessible.",
+    latitude: 37.75016,
+    longitude: -122.43815,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Revitalized Edwardian Residence with Rooftop Patio",
+    description: "Find relics from the past in this update historical home. The space boasts original design features, wood finishes, a tasteful blend of different furnishings and decor, and a private backyard with an outdoor dining area.",
+    num_guests: 6,
+    num_bedrooms: 3,
+    num_beds: 4,
+    num_baths: 2,
+    listing_type: "whole house",
+    price: 1000,
+    location: "San Francisco, California, United States",
+    loc_detail: "This tree-lined neighborhood is sandwiched between Lake Street, Mountain Lake Park, and the Presidio on one side and the shops and cafes of California and Clement Streets on the other. It is on the North side of town close to the Golden Gate Bridge.",
+    latitude: 37.78457,
+    longitude: -122.46945,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+
+  Spot.create(
+    title: "Stylish Home with Fireplace and Deck near Golden Gate Park",
+    description: "Discover a quiet oasis right in the middle of the city. Filled with light and charm with all the comforts for every family member, young and old. Prepare meals in a home-style kitchen and dine at a formal table. Relax by the outdoor fire pit while looking out at the San Francisco skyline.",
+    num_guests: 7,
+    num_bedrooms: 3,
+    num_beds: 3,
+    num_baths: 2,
+    listing_type: "entire house",
+    price: 407,
+    location: "San Francisco, California, United States",
+    loc_detail: "The house is in the Lone Mountain neighborhood, next to University of San Francisco and a few blocks from Golden Gate Park, with its gorgeous trails and the De Young Museum. Walk to the Divisadero Corridor to discover new hot restaurants.",
+    latitude: 37.77858,
+    longitude: -122.4492,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Retreat in a Roomy Apartment in Mission Dolores / Castro",
+    description: "Stay in the vibrant heart of SF in a chic apt favored by airbnb employees! Steps from Dolores Park, Michelin star restaurants, and hip bars, this exceptionally-designed oasis is a walker's and foodie's paradise, unmatched in comfort and style.",
+    num_guests: 8,
+    num_bedrooms: 4,
+    num_beds: 5,
+    num_baths: 3,
+    listing_type: "whole house",
+    price: 799,
+    location: "San Francisco, California, United States",
+    loc_detail: "Spectacular location in SF’s hottest neighborhood - walk to shops, bars and world-class eateries, with Dolores Park's warm breezes a block away. Also steps from 6 public transportation lines with direct access to Union Square, MOMA+ Golden Gate Park.",
+    latitude: 37.76166,
+    longitude: -122.42943,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Near Moscone Center, Privacy with Style - the SoMa Loft",
+    description: "SoMa Second Home - the SoMa Loft - is a private, airy and bright SoMa loft style apartment. Unwind amongst the globally inspired decor, while the sun streams in through the giant windows, or head into the shared courtyard for a nap in the sun.",
+    num_guests: 2,
+    num_bedrooms: 1,
+    num_beds: 1,
+    num_baths: 1,
+    listing_type: "whole apartment",
+    price: 269,
+    location: "San Francisco, California, United States",
+    loc_detail: "South of Market is one of the most diversified neighborhoods in San Francisco, close to everywhere. Walking distance to Moscone Center, MoMa, AT&T Park and Union Square. Whole Foods is only a block away. SoMa Second Home is surrounded by cafes, restaurants, breweries, clubs and shops.",
+    latitude: 37.77945,
+    longitude: -122.40382,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Industrial-Chic Loft with Private Roof Deck and City Views",
+    description: "Gaze over a sprawling city from this cool urban loft characterized by steel fittings and polished, heated, concrete floors. The expansive roof deck is a spectacular spot. The third bedroom is a convertible bedroom that converts the living room into its own private space with sofa. Metal and glass doors in the 3rd bedroom picture can be moved to enclose the sofa nook. This qualifies as a hosted stay which means the host can be available when needed but otherwise guests will enjoy full privacy",
+    num_guests: 3,
+    num_bedrooms: 1,
+    num_beds: 1,
+    num_baths: 1,
+    listing_type: "whole apartment",
+    price: 407,
+    location: "San Francisco, California, United States",
+    loc_detail: "Known as the land of startups and famed for its bounty of new restaurants and bars, SoMa is a lively neighborhood defined by its warehouses and waterfront position. Explore on foot or take a short taxi ride to the city's other highlights. Please note that the first 2 guests are included in the price, but extra guests beyond 2 increase the pricing by 50 per guest per night. This really helps us with extra cleaning and laundry and especially rent (SF is a nightmare).",
+    latitude: 37.77461,
+    longitude: -122.41034,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+
+  
+  Spot.create(
+    title: "Elegant and Eclectic Townhouse with Victorian Charm",
+    description: "Select a classic novel from a shelf and curl up on a traditional sofa to read next to a sunny window. This spacious house has retained much of its Victorian charm and architectural details. A vintage gas stove and clawfoot tub add to the ambience.",
+    num_guests: 8,
+    num_bedrooms: 4,
+    num_beds: 4,
+    num_baths: 1,
+    listing_type: "entire house",
+    price: 430,
+    location: "San Francisco, California, United States",
+    loc_detail: "The house is in the Mission District, known for its great restaurants and coffee shops. It is in the heart of San Francisco, and is easily accessible to other neighborhoods. The area is famous for its mural art painted on many of the buildings.",
+    latitude: 37.75466,
+    longitude: -122.41197,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Walk to Golden Gate Park from a Radiant",
+    description: "Breakfast at a bright nook table in the eat-in kitchen, step through the adjacent door for coffee on a sunny deck patio overlooking the garden, or sit down for a meal in the formal dining room. With its stately design elements, classic fittings, contemporary style, and traditional hardwood furnishings, this gorgeous Victorian home is a domain of reserved elegance.",
+    num_guests: 6,
+    num_bedrooms: 3,
+    num_beds: 3,
+    num_baths: 2.5,
+    listing_type: "entire house",
+    price: 450,
+    location: "San Francisco, California, United States",
+    loc_detail: "The house is in a beautiful area within a 5-minute walk from the Haight-Ashbury, Cole Valley, and Inner Sunset neighborhoods, offering a variety of restaurants, cafes, and shopping. Golden Gate Park is steps away, making for short walks to the Academy of Sciences, DeYoung Museum, Children's Park, and Botanical Gardens. The light rail stops a half block away in front of UCSF Hospital, for an easy trip downtown and points beyond.",
+    latitude: 37.765,
+    longitude: -122.458,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Iconic Victorian Architecture with City Views",
+    description: "Relish staying in this Victorian San Francisco treasure. Classic architectural details have been carefully preserved and are evident at every turn. Fix a gourmet meal in the modern kitchen and spend the evening admiring the city from the balcony.",
+    num_guests: 6,
+    num_bedrooms: 3,
+    num_beds: 3,
+    num_baths: 3,
+    listing_type: "entire house",
+    price: 475,
+    location: "San Francisco, California, United States",
+    loc_detail: "Walk the streets of Noe Valley, a family-friendly area with shops, cafes, and restaurants for all tastes. Travel to many city areas easily by public transport, or rent a car and have a day out of the city enjoying nature, small towns, and wine.",
+    latitude: 37.74097,
+    longitude: -122.42896,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Luxury Balinese Oasis House with Garden Hot Tub",
+    description: "Soak in the alfresco hot tub in the lush, secluded garden of this Balinese-influenced, resort-like retreat. Bali Hai Castro's stylish Asian Buddhist decor lends a zen ambiance to the sleek, modern luxury fittings. The plush patio hosts a fire table.",
+    num_guests: 6,
+    num_bedrooms: 2,
+    num_beds: 3,
+    num_baths: 2,
+    listing_type: "entire house",
+    price: 695,
+    location: "San Francisco, California, United States",
+    loc_detail: "Bali Hai Castro is a short walk from the Castro District’s restaurants, cafes, bars, supermarkets, and MUNI transit station. It is also convenient for Corona Heights Park’s tennis and basketball courts, plus a hiking trail with stunning city views.",
+    latitude: 37.76379,
+    longitude: -122.43972,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Modern Minimalist Condo with Great City Views",
+    description: "Relax by the cozy fireplace of this bright, top-floor condo. The apartment is centrally located and offers up sweeping views of San Francisco from the spacious and bright living room. Enjoy easy access to public transport or walk to Noe Valley.",
+    num_guests: 5,
+    num_bedrooms: 2,
+    num_beds: 2,
+    num_baths: 2,
+    listing_type: "condo",
+    price: 500,
+    location: "San Francisco, California, United States",
+    loc_detail: "The building is located next to the landmark of Twin Peaks in the geographical center of San Francisco in what feels like a private perch above the city. However, the area’s conveniently located near Noe Valley and Castro with easy access downtown.",
+    latitude: 37.75259,
+    longitude: 122.44498,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Sunny Upper Floor Flat in an Authentic Neighborhood",
+    description: "Grab a magazine from a rack and kick back old-style on a comfy couch or in a sunny bay window. Vibrant art, colorful furnishings, and cool accents give rooms a cheerful vibe. Jam with bongos and a ukulele beside an ornamental brick fireplace.",
+    num_guests: 9,
+    num_bedrooms: 4,
+    num_beds: 4,
+    num_baths: 2,
+    listing_type: "full apartment",
+    price: 486,
+    location: "San Francisco, California, United States",
+    loc_detail: "The house is in the walkable Portola neighborhood, south of Bernal Heights. It's a family-friendly and ethnically diverse working-class area. Walk to restaurants, a brewery, a playground, tennis and basketball courts, and a grocery store.",
+    latitude: 37.729,
+    longitude: -122.408,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Unique, Modern Apartment with Contempora",
+    description: "Wake up refreshed in this spacious bright full-floor apartment in an iconic Victorian corner building. Kick back in a renovated designer boutique-style space filled with mid-century and contemporary furniture and an eclectic modern art collection.",
+    num_guests: 5,
+    num_bedrooms: 3,
+    num_beds: 3,
+    num_baths: 2,
+    listing_type: "full apartment",
+    price: 580,
+    location: "San Francisco, California, United States",
+    loc_detail: "Nopa is a centrally located, vibrant residential neighborhood, an area of tree-lined streets between Alamo Square and Golden Gate Park, intersected by a lively boulevard lined with unique storefronts, cafes & some of San Francisco’s best restaurants.",
+    latitude: 37.77895,
+    longitude: -122.43634,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Gorgeous Serenity in the City with Views near Haight Ashbury",
+    description: "Settle into this amazing, light filled, stunning old San Francisco home with incredible south facing city and park views! Relax in the open space of a large great room. Filled with character, this renovated Victorian has 112 years of history to tell",
+    num_guests: 6,
+    num_bedrooms: 3,
+    num_beds: 3,
+    num_baths: 2,
+    listing_type: "entire house",
+    price: 675,
+    location: "San Francisco, California, United States",
+    loc_detail: "In the heart of the city near incredible Golden Gate Park, the apartment is within walking distance of NOPA, Haight Ashbury, The DeYoung museum, Academy of Sciences, Conservatory of Flowers, Stow Lake, plus many great restaurants and shops",
+    latitude: 37.77306,
+    longitude: -122.45278,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Charming Victorian in Lower Haight",
+    description: "Defined by the exuberant decor and eclectic furnishings within its vibrant rooms, this elegant Victorian bears a warmth and enchantment that inspires at every turn. Fix breakfast amid the kitchen's knotty-wood cabinetry to enjoy in the bay window booth.",
+    num_guests: 7,
+    num_bedrooms: 4,
+    num_beds: 4,
+    num_baths: 2,
+    listing_type: "entire house",
+    price: 550,
+    location: "San Francisco, California, United States",
+    loc_detail: "Lower Haight is a historic corridor that borders the iconic Castro, Haight-Ashbury, and Mission neighborhoods at the cultural core of the city. Charming restaurants, lively bars, and delightful boutiques, as well as 5 green spaces are all steps away.",
+    latitude: 37.77337,
+    longitude: -122.43529,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Classic Architecture with Modern Design in City Center",
+    description: "Classic Victorian architecture coupled with a modern eclectic interior create a feeling of warm minimalism. Indoor plants, antiques, and light fill the space. Relax on the spacious outdoor deck with grill surrounded by beautiful gardens.",
+    num_guests: 4,
+    num_bedrooms: 2,
+    num_beds: 2,
+    num_baths: 2,
+    listing_type: "full apartment",
+    price: 425,
+    location: "San Francisco, California, United States",
+    loc_detail: "Centrally located and surrounded by parks, public transport, and fantastic bars and restaurants. Downtown is easily accessible via the metro rail line just blocks away. Iconic Haight-Ashbury, Golden Gate Park, and world-class museums are all nearby.",
+    latitude: 37.76719,
+    longitude: -122.44824,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Potrero Paradise with Stunning Views and",
+    description: "Wake up to iconic skyline views from a bedroom balcony. Brew coffee in the chef's kitchen and relax in the charming front garden. After a dip in the hot tub, read a book in a living room amid stunning decor and timeless furnishings. This spacious three-story, three bedroom home (plus Sitting Room that can be made up to a fourth bedroom) and its five patios and balconies feature stunning views of Twin Peaks, Downtown, and Bay Bridge. The house is set away from the street with a gracious front patio/garden and is very quiet.",
+    num_guests: 8,
+    num_bedrooms: 3,
+    num_beds: 3,
+    num_baths: 3,
+    listing_type: "entire house",
+    price: 650,
+    location: "San Francisco, California, United States",
+    loc_detail: "The house is set away from the street near the top of Potrero Hill, a quiet and walkable neighborhood known for its sunny weather, charming eateries, hip bars, quaint boutiques. Visit the nearby Museum of Craft and Design, or head to the neighboring Mission District. The home is also convenient to Moscone Convention Center, SoMa, and ATT Park. Parking is plentiful outside the home and no permit is required.",
+    latitude: 37.761,
+    longitude: -122.404,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Sunny, Modern House with Great Views",
+    description: "Cook a delicious dinner in the bright and spacious kitchen, then serve up to eight guests in the elegant, simple dining room with floor-to-ceiling windows. This sunny, modern Edwardian atop Potrero Hill is thoughtfully minimalist with amazing views.",
+    num_guests: 6,
+    num_bedrooms: 3,
+    num_beds: 4,
+    num_baths: 2,
+    listing_type: "full apartment",
+    price: 599,
+    location: "San Francisco, California, United States",
+    loc_detail: "Potrero Hill has some of the best views in the city. It is full of hidden gems: parks, views, eateries, history, and shopping. Nearby are the vibrant and fun SoMa and Mission neighborhoods.",
+    latitude: 37.76134,
+    longitude: -122.40268,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Superb Location Sunny Trails/Views Minutes from SF",
+    description: "Gorgeous 3700 Square Foot home in the Oakland Hills. 20min ride to downtown San Francisco and 6min drive to Rockridge Bart station. Located on Joaquin Miller Road right across the street from two regional parks, Redwood Regional and Joaquin Miller park with ample trails, creeks and views of the Bay and San Francisco for those who also enjoy the outdoors.",
+    num_guests: 12,
+    num_bedrooms: 4,
+    num_beds: 6,
+    num_baths: 3.5,
+    listing_type: "entire house",
+    price: 695,
+    location: "San Francisco, California, United States",
+    loc_detail: "Located on Joaquin Miller Road, the property sits right across the street from two regional parks: Redwood Regional and Joaquin Miller park, home to ample trails, creeks, and views of the Bay. It's a 15-minute ride to downtown San Francisco.",
+    latitude: 37.80732,
+    longitude: -122.18232,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+  Spot.create(
+    title: "Hilltop Retreat with Panoramic Cityscape Vistas",
+    description: "Indulge in comfort and style at this tranquil suburban home. The renovated residence features chic furnishings and decor, an open-plan main floor, soothing grays, unique artwork throughout, and a private deck.",
+    num_guests: 11,
+    num_bedrooms: 4,
+    num_beds: 6,
+    num_baths: 2,
+    listing_type: "entire house",
+    price: 695,
+    location: "San Francisco, California, United States",
+    loc_detail: "The property is tucked away on a quiet hilltop corner lot in a coveted neighborhood. It is located just a short drive away from downtown SF and SFO airport, with easy access to freeways and the restaurants of Market Street.",
+    latitude: 37.70574,
+    longitude: -122.42811,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  ) 
+  
+   Spot.create(
+    title: "Indulge in a Designer Victorian in Pacific Heights",
+    description: "Unwind in contemporary luxury in this spectacular 1900s Victorian home. The space offers the utmost privacy and instills a sense of peace and belonging with the large backyard, bright and modern kitchen, patio walkout, and designer furnishings.",
+    num_guests: 6,
+    num_bedrooms: 3,
+    num_beds: 4,
+    num_baths: 3,
+    listing_type: "entire house",
+    price: 800,
+    location: "San Francisco, California, United States",
+    loc_detail: "Regal mansions and prestigious buildings are the essence of Pacific Heights. This prim and proper neighborhood epitomizes old-world elegance. The quiet streets are mostly enlivened with passers-by appreciating its jaw-dropping architectural grandeur.",
+    latitude: 37.789,
+    longitude: -122.43939,
+    wifi: true,
+    washer: true,
+    tv: true,
+    elevator: true,
+    parking: true,
+    kitchen: true
+  )
+
+  # attach hosts to spots
+
+  user_arr = []
+
+  User.all.each_with_index do |user,idx|
+    if idx < 15
+      user_arr.push(user)
+    else
+      user_arr.unshift(user)
+    end
+  end
+
+  Spot.all.each_with_index do |spot,idx|
+    spot.host_id = user_arr[idx].id
+  end
+
+  # attach photos to spots
+
+  Spot.all.each_with_index do |spot,idx|
+    (1..8).each do |pic_idx|
+      file = EzDownload.open("https://s3.console.aws.amazon.com/s3/object/waterbnb-seed/spots/SF/0#{idx+1}-SF/0#{idx+1}-0#{pic_idx}-SF.jpg?region=us-east-2&tab=overview")
+      spot.photo.attach(io: file, filename: "0#{pic_idx}-SF.jpg")
+    end
+    spot.save! if spot.photos.attached?
+  end
+
+
+end
 
 
 
