@@ -12,10 +12,3 @@ export const fetchSpot = id => (
     })
 );
 
-
-// export const fetchUserSpots = id => (
-//     $.ajax({
-//         method: 'get',
-//         url: `/api/spots/?host_id=${id}`
-//     })
-// );

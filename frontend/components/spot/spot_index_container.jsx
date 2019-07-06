@@ -5,7 +5,7 @@ import { fetchSpots} from '../../actions/spot_actions';
 
 
 const msp = state => ({
-    spots: Object.value(state.entities.spots)
+    spots: Object.values(state.entities.spots)
 })
 
 const mdp = dispatch => ({

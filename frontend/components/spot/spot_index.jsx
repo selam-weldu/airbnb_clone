@@ -1,5 +1,5 @@
 import React from 'react';
-import ListingIndexItem from './listing_index_item';
+import SpotIndexItem from './spot_index_item';
 
 
 class SpotIndex extends React.Component {
@@ -16,7 +16,7 @@ class SpotIndex extends React.Component {
         const spots = this.props.spots.map(spot => {
             return (
                 <SpotIndexItem 
-                    key={listing.id} 
+                    key={spot.id} 
                     spot={spot}/>
             )
         });
