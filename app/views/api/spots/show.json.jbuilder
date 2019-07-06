@@ -1,5 +1,8 @@
-json.extract! @spot, :id, :title, :type, :description, :type, 
-                     :host_id, :price, :num_rooms, :num_bedrooms,
-                     :num_beds, :num_guests, :wifi, :washer, :dryer,
-                     :elevator, :parking, :kitchen, :location, :loc_detail,
-                     :longitude, :latitude
+json.extract! @spot, :id, :title, :description,:num_guests,:num_bedrooms,
+                        :num_beds,:num_baths,:listing_type, :price, :location, 
+                        :loc_detail,:latitude, :longitude,:host_id, :wifi, :washer, 
+                        :tv, :elevator, :parking, :kitchen
+json.photo_url url_for(@spot.photos.first) 
+json.photoUrls @spot.photos.map { |photo| url_for(photo) }                     
+
+
