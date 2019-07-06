@@ -16,8 +16,8 @@ export const receiveSpot = Spot => ({
 
 
 
-export const fetchSpots = filters => dispatch => (
-    SpotAPIUtil.fetchSpots(filters)
+export const fetchSpots = () => dispatch => (
+    SpotAPIUtil.fetchSpots()
         .then(Spots => (dispatch(receiveSpotes(Spots))
     ))
 );
