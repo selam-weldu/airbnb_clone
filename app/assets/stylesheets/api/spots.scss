@@ -1,3 +1,116 @@
 // Place all the styles related to the api/spots controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.spot-index-item{
+    padding-left: 8px; 
+    padding-right: 8px; 
+    width: 100%;
+    height: 100%;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    display: block;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    background-color: #fff;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.spot-li {
+    display: flex;
+    justify-content: space-between;
+    position: relative ;
+    color: rgb(72, 72, 72) ;
+    height: 100% ;
+    margin-bottom: 4px ;
+    border-width: 1px ;
+    border-style: solid ;
+    border-color: rgb(235, 235, 235) ;
+    border-image: initial ;
+    border-radius: 4px ;
+}
+
+.spot-photos {
+    width: 300px;
+    height: 200px;
+    display: block;
+}
+
+.spot-info {
+    height: 200px;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    background-color: #fff;
+    margin-right: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.spot-short-info {
+    padding-right: 40px;
+    box-sizing: border-box;
+    line-height: 1.43;
+}
+
+.plus {
+    font-size: 12px ;
+    line-height: 16px ;
+    letter-spacing: normal ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif ;
+    text-transform: uppercase ;
+    color: white ;
+    display: inline-block ;
+    white-space: nowrap ;
+    padding-left: 5px ;
+    padding-right: 5px ;
+    padding-top: 2px ;
+    padding-bottom: 1px ;
+    border: 1px solid rgb(145, 70, 105);
+    background-color: rgb(145, 70, 105);
+    border-radius: 4px ;
+}
+
+.spot-type {
+    color: rgb(145, 70, 105);
+    overflow-wrap: break-word ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif ;
+    font-size: 12px ;
+    font-weight: 800 ;
+    line-height: 1.33333em ;
+    text-transform: uppercase ;
+    box-sizing: border-box;
+    
+}
+
+.spot-title {
+    line-height: 22px ;
+    box-sizing: border-box;
+    overflow-wrap: break-word ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif ;
+    font-size: 18px ;
+    font-weight: 600 ;
+    color: rgb(72, 72, 72) ;
+    -webkit-font-smoothing: antialiased;
+}
+
+.spot-details .amenities {
+    overflow-wrap: break-word ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif ;
+    font-size: 14px ;
+    font-weight: 400 ;
+    line-height: 1.28571em ;
+    color: rgb(72, 72, 72) ;
+}
+
+.spot-footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px;
+}

@@ -13,13 +13,11 @@ class SpotIndex extends React.Component {
 
     render() {
         
-        const spots = this.props.spots.map(spot => {
-            return (
+        const spots = this.props.spots.map(spot => (
                 <SpotIndexItem 
                     key={spot.id} 
                     spot={spot}/>
-            )
-        });
+        ));
 
         return (
             <div className="spots-index-container">
@@ -30,7 +28,7 @@ class SpotIndex extends React.Component {
                     </div>
                     <div className="index-aside">
                         <div className="aside-text">
-                            Look at this place!
+
                         </div>
                     </div>
                 </div>
@@ -39,23 +37,14 @@ class SpotIndex extends React.Component {
 
                     <div className="spots-header-container">
                         <div className="spots-header">
-                            <p>This is a great place to stay.</p>
+                            <p></p>
                         </div>
                     </div>
 
-                    <ul className="spots-ul">
-                        {spots}
-                    </ul>
+                    <div className="spot-container">
+                        <ul className="spot-ul">{spots}</ul>
+                    </div>
 
-                    {/* <div className="index-footer-container">
-                        <div className="index-footer-container2">
-                            <div className="index-personal">LinkedIn</div>
-                            <div className="index-personal">·</div>
-                            <div className="index-personal">GitHub</div>
-                            <div className="index-personal">·</div>
-                            <div className="index-personal">Portfolio</div>
-                        </div>
-                    </div> */}
                 </div>
             </div>
         );

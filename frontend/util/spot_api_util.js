@@ -1,13 +1,16 @@
-export const fetchSpots = () => (
-    $.ajax({
-        method: 'get',
-        url: '/api/spots'
-    })
-);
+export const fetchSpots = () => {
+    // debugger
+    return (
+        $.ajax({
+            method: 'Get',
+            url: '/api/spots'
+        })
+    )
+};
 
 export const fetchSpot = id => (
     $.ajax({
-        method: 'get',
+        method: 'Get',
         url: `/api/spots/${id}`
     })
 );
