@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+* {
+    box-sizing: border-box;
+}
 .spot-index-item{
     padding-left: 8px; 
     padding-right: 8px; 
@@ -42,7 +45,6 @@
 .spot-info {
     height: 200px;
     padding: 12px 16px;
-    box-sizing: border-box;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
     font-size: 14px;
     line-height: 1.43;
@@ -55,7 +57,6 @@
 
 .spot-short-info {
     padding-right: 40px;
-    box-sizing: border-box;
     line-height: 1.43;
 }
 
@@ -85,13 +86,11 @@
     font-weight: 800 ;
     line-height: 1.33333em ;
     text-transform: uppercase ;
-    box-sizing: border-box;
     
 }
 
 .spot-title {
     line-height: 22px ;
-    box-sizing: border-box;
     overflow-wrap: break-word ;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif ;
     font-size: 18px ;
@@ -113,4 +112,95 @@
     display: flex;
     justify-content: space-between;
     margin-top: 75px;
+}
+
+p:nth-child(1) {
+    margin: 0px ;
+    word-wrap: break-word ;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+    color: #484848 ;
+    line-height: normal;
+    text-overflow: ellipsis;
+    align-items: center;
+}
+
+p:nth-child(2) {
+    margin: 0px ;
+    word-wrap: break-word ;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+    font-size: 16px ;
+    font-weight: 600 ;
+    line-height: 1.375em ;
+    color: #484848 ;
+}
+
+
+// ////// slideshow
+
+.slideshow-container {
+  max-width: 100px;
+  position: relative;
+  margin: auto;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
