@@ -9,11 +9,11 @@
 //     )
 // };
 
-export const fetchSpots = (filters) => {
+export const fetchSpots = (data) => {
     // debugger
     return $.ajax({
         method: "GET",
-        url: `/api/spots?bounds=${JSON.stringify(filters.bounds)}`
+        url: `/api/spots?bounds=${JSON.stringify(data.bounds)}`
     });
 }
 

@@ -10,13 +10,13 @@ class Search extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className="spot-index-container">
                 <div className="right-side">
                     <SpotMap
                         spots={this.props.spots}
                         updateFilter={this.props.updateFilter} />
                 </div>
-                
+
                 <div className="left-side">
                     <SpotIndex
                         spots={this.props.spots}
