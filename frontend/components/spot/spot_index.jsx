@@ -40,7 +40,7 @@ class SpotIndex extends React.Component {
                     <div className="spots-header">
                         Airbnb Plus places to stay in San Francisco
                     </div>
-                    <div>
+                    <div className="spots-ul">
        
                         <ul>{spots}</ul>
                     </div>
