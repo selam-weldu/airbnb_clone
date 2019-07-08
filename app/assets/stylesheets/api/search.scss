@@ -1,0 +1,270 @@
+// .search-form{
+//   position: relative;
+//   background: white;
+//   border-radius: 4px;
+//   width: 365px;
+//   box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+//   padding: 32px 32px 24px;
+//   font-weight: 900;
+//   top: 15%;
+//   left: 15%;
+
+//   button {
+//     display: block;
+//     font-size: 16px;
+//     border-radius: 4px;
+//     background: black;
+//     padding: 10px 22px;
+//     color: white;
+//     font-weight: 600;
+//     border-width: 2px;
+//     border-color: black;
+//     cursor: pointer;
+//   }
+// }
+
+
+// .search-form-field {
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+//   // display: flex;
+
+//   input {
+//     display: block;
+//     border-radius: 2px;
+//     border: 1px solid grey;
+//     box-sizing: border-box;
+
+//     // width: calc(100% - 21px);
+//     width: 100%;
+//     color: grey;
+//     font-size: 15px;
+//     padding: 10px 10px
+//   }
+
+//   input:hover, textarea:hover,
+//   input:focus, textarea:focus {
+//     border: 1px solid black;
+//   }
+
+//   label {
+//     display: block;
+//     font-weight: 700;
+//     margin: 5px 0 0 0;
+//     padding: 0 0 5px 0;
+//   }
+
+//   > textarea {
+//     display: block;
+//     color: grey;
+//     border-radius: 2px;
+//     font-size: 15px;
+//     padding: 10px;
+//     border: 1px solid grey;
+//     width: calc(100% - 21px);
+//     height: 50px;
+//     resize: none;
+//   }
+// }
+
+// .search-form-button{
+//   padding-top: 15px;
+//   padding-bottom: 5px;
+// }
+
+// .inline {
+//   display: flex;
+// }
+
+// .search-form-inline-field {
+//   width: 100%;
+// }
+
+
+    
+/* header {
+  width: 100%;
+  height: 89px;
+  top: 0;
+  position: fixed;
+} */
+
+
+* {
+  box-sizing: border-box;
+}
+.nav-container {
+  overflow: hidden;
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
+  height: 89px;
+}
+
+.nav-buttons {
+  position: absolute;
+  padding-right: 10px;
+  right: 0px;
+  width: 50%;
+  height: 89px;
+  float: right;
+}
+
+.nav-buttons * {
+  float: right;
+  color: white;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-right: 25px;
+  padding-left: 15px;
+  background: none;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav-button:hover {
+  border-bottom:3px solid
+}
+
+.nav-logo-container {
+  position: absolute;
+  left: 0px;
+  width: 50%;
+  height: 89px;
+}
+
+.nav-logo {
+   height: 89px;
+   width: 80px;
+}
+
+.logo {
+    padding: 24px;
+    height: 89px;
+    width: 93px;
+}
+
+/* NAV BAR 2: */
+
+.nav2-head {
+  position: fixed;
+  z-index: 100;
+  background: white;
+  width: 100%;
+}
+
+.nav2-head *{
+  /* z-index: 100; */
+  background:  whitergb(248, 246, 246)
+}
+
+.nav2-container {
+  display: flex;                  
+  flex-direction: row;            
+  flex-wrap: nowrap;              
+  justify-content: space-between;
+  height: 89px;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  background: white;
+  margin-left: 0;
+}
+
+.nav2-buttons-container {
+  width: 35%
+}
+
+.nav2-search-container {
+    background: white;
+
+  width: 65%;
+  display: flex;
+  flex-direction: row;            
+  flex-wrap: nowrap;  
+            
+}
+
+.nav2-button {
+  float: right;
+  color: rgb(90, 87, 87);
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-right: 25px;
+  padding-left: 15px;
+  background: none;
+  border: none;
+  font-weight: bold;
+  outline: none;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.nav2-button:hover {
+  border-bottom:3px solid
+}
+
+.nav2-search-outer {
+  width: 460px;
+
+}
+
+.nav2-logo {
+  
+   width: 10vw;
+    height: 6vw;
+    background-size: 10vw 6vw;
+  // height: 80px;
+  // width: 80px;
+  margin-right: 5px;
+  margin-top: 5px;
+    /* z-index: 10; */
+  background: white;
+} 
+
+.logo2 {
+    padding: 5px;
+    height: 80px;
+    width: 80px;
+}
+
+.nav2-search-inner {
+    width: 100%;
+    margin-top: 19px;
+    margin-bottom: 19px;
+    height: 50px;
+    border-radius: 4px;
+    background: white;
+
+    /* z-index: 50; */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) ;
+    transition: box-shadow 200ms ease-in !important;
+    border: 1px solid #EBEBEB !important;
+}
+
+.nav2-search-inner:hover {
+    box-shadow: 3px 5px 6px rgba(43, 42, 42, 0.1);
+}
+
+#nav2-search {
+    margin-left: 10px;
+    height: 100%;
+    width: 390px;
+    border: none;
+    outline: none;
+    font-weight: 800;
+    font-size: 20px;
+    color: black;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: 1px;
+}
+
+.nav-bar-container {
+  width: 100%;
+}
+
+
+
