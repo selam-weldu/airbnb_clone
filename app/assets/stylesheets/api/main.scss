@@ -5,5 +5,19 @@
     height: 100vh;
     width: 100vm;
     background-position: center;
+    position: relative;
+}
+
+.splash-footer {
+    margin: 0px;
+    // word-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.375em;
+    color: white;
+    position: absolute;
+    right: 6px;
+    bottom: 12px;
 }
 

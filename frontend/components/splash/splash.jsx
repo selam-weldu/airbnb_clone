@@ -3,10 +3,11 @@ import NavbarContainer from './navbar_container';
 import Modal from '../modal/modal';
 import { Link } from 'react-router-dom';
 import SearchForm from '../search/search_form';
+import Footer from './footer';
+import SearchFormContainer from '../search/search_form_container';
 
 
-const Splash
- = (props) => {
+const Splash = (props) => {
     return (
         <div className="main-container">
             <div className="nav-bar">
@@ -24,14 +25,18 @@ const Splash
             </div>
 
             <div>
-                <SearchForm/>
+                <SearchFormContainer/>
+            </div>
+
+            <div>
+                <Footer/>
             </div>
 
         </div>
     );
 };
 
-export default Splash
+export default Splash;
 
 
 

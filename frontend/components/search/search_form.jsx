@@ -3,15 +3,37 @@ import React from 'react';
 class SearchForm extends React.Component { 
     constructor(props){
         super(props);
-        this.navigateToSearch = this.navigateToSearch.bind(this)
+        this.state ={
+            address: ""
+        }
+      
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    // handleChange(filter, updateFilter) => e => (
-    //     updateFilter(filter, parseInt(e.currentTarget.value))
-    // );
+  
 
-    navigateToSearch() {
-        // this.props.history.push('/spots');
+    handleChange(e){
+        this.setState({address: e.target.value})
+    }
+
+    handleSubmit(e){
+        // debugger
+        e.preventDefault();
+        let coords = new google.maps.Geocoder();
+        coords.geocode({"address": this.state.address},(results,status)=>{
+            let lat, lng;
+            if(status === 'OK'){
+                // debugger
+                lat = results[0].geometry.location.lat()
+                lng = results[0].geometry.location.lng()
+                this.props.receiveSearch({lat,lng});
+                this.props.history.push(`/spots?lat=${lat}&lng=${lng}/`)
+            }
+            
+        })
+
+
     }
 
     render() {
@@ -19,7 +41,7 @@ class SearchForm extends React.Component {
     return (
     <div className="search-form-container">
         <div className="search-form">
-            <form className="search-form-form">
+            <form className="search-form-form" onSubmit={this.handleSubmit}>
                 <div className="search-form-header">
                     Book unique places to stay and things to do.
             </div>
@@ -27,6 +49,8 @@ class SearchForm extends React.Component {
                     <label>WHERE
                         <br/>
                     <input
+                            onChange={this.handleChange}
+                            value={this.state.address}
                             type="text"
                             placeholder="San Francisco,CA,Unite States" />
                     </label>
@@ -52,7 +76,7 @@ class SearchForm extends React.Component {
                     </label>
                 </div>
                 <div className="search-button-container">
-                        <button onClick={this.navigateToSearch}type="button">Search</button>
+                        <button onClick={this.handleSubmit} type="button">Search</button>
                 </div>
             </form>
         </div>
