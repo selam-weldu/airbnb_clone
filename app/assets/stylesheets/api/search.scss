@@ -263,11 +263,19 @@
     width: 390px;
     border: none;
     outline: none;
-    font-weight: 800;
-    font-size: 20px;
-    color: black;
+  
+    
     font-family: Roboto, "Helvetica Neue", sans-serif;
     letter-spacing: 1px;
+
+    background-color: transparent ;
+    width: 100% ;
+    text-overflow: ellipsis ;
+    font-weight: 800 ;
+    font-size: 17px ;
+    color: rgb(72, 72, 72) ;
+    border-image: initial ;
+    padding: 0px ;
 }
 
 .nav-bar-container {

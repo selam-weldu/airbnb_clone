@@ -2,6 +2,8 @@ import React from 'react';
 import NavbarContainer from './navbar_container';
 import Modal from '../modal/modal';
 import { Link } from 'react-router-dom';
+import SearchForm from '../search/search_form';
+
 
 const Splash
  = (props) => {
@@ -20,11 +22,16 @@ const Splash
                 </header>
 
             </div>
+
+            <div>
+                <SearchForm/>
+            </div>
+
         </div>
     );
 };
 
 export default Splash
-;
+
 
 

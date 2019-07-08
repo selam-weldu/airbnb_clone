@@ -5,9 +5,9 @@ const Navbar = ({ currentUser, logout, openModal }) => {
 
     const beforeSession = () => (
         <nav className="login-signup">
-            <button onClick={() => openModal('signup')}>Signup</button>
+            <button onClick={() => openModal('signup')}>Sign up</button>
             &nbsp;&nbsp;
-            <button onClick={() => openModal('login')}>Login</button>
+            <button onClick={() => openModal('login')}>Log in</button>
         </nav>
     );
     const afterSession = () => (

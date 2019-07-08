@@ -90,7 +90,7 @@
     font-weight: 800 ;
     line-height: 1.33333em ;
     text-transform: uppercase ;
-    
+        // postion: relative;
 }
 
 .spot-title {
@@ -117,6 +117,8 @@
     display: flex;
     justify-content: space-between;
     margin-top: 75px;
+    // position: absolute;
+    // right: 10px;
 }
 
 p:nth-child(1) {
@@ -153,7 +155,7 @@ p:nth-child(2) {
 .right-side {
     width: 1100px;
     height: 1000px;
-    margin-left: 30px;
+    margin-left: 10px;
     margin-top: 40px;
     /* overflow-y: scroll; */
     padding: 0 20px 20px 20px;
@@ -190,3 +192,8 @@ p:nth-child(2) {
      margin-left: 24px;
      padding: 0px 0px;
  }
+
+.heart {
+    position: absolute;
+    right: 10px;
+}

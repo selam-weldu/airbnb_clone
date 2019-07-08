@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchForm from '../search/search_form';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -47,13 +48,22 @@ class SearchBar extends React.Component {
             //             onKeyPress={this.handleEnter} />
             //     </div>
             // </div>
+            <div>
+            <div>
+            
+                <SearchForm
 
+                    updateFilter={this.props.updateFilter}
+                />
+
+            </div>
             <div className="nav2-search-outer">
                 <div className="nav2-search-inner">
                     <input
                         onChange={this.handleUpdate} type="text" placeholder="Try &quot;San Francisco&quot;" id="nav2-search"
                         onKeyPress={this.handleKeyPress} />
                 </div>
+            </div>
             </div>
         )
     }

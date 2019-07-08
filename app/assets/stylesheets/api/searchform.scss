@@ -1,0 +1,148 @@
+.search-form-container {
+     background: #ffffff ;
+    border-radius: 4px ;
+    padding: 32px ;
+    padding-bottom: 24px ;
+    width: 441px ;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12) ;
+    margin-left: 200px;
+    height: 500px;
+        margin-top: 50px;
+}
+
+.search-form {
+
+}
+
+.search-form-form{
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    background-color: #fff;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    margin-top: 0em;
+    height: 425px;
+    position: relative;
+}
+
+.search-form-header{
+     font-size: 30px ;
+    line-height: 36px ;
+    letter-spacing: normal ;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+    text-transform: undefined ;
+    color: #484848 ;
+    padding-top: 6px ;
+    padding-bottom: 6px ;
+    margin: 0px ;
+    padding: 0px ;
+}
+
+.where-input{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    -webkit-font-smoothing: antialiased;
+
+        margin: 0px ;
+    word-wrap: break-word ;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+    font-size: 12px ;
+    font-weight: 800 ;
+    line-height: 1.3333333333333333em ;
+    letter-spacing: 0.08333333333333333em ;
+    color: #484848 ;
+}
+
+
+
+.check{
+    width: 50% ;
+    display: inline-block ;
+    overflow: hidden ;
+    display: flex;
+    margin-top: 8px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+
+     margin: 0px ;
+    word-wrap: break-word ;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+    font-size: 12px ;
+    font-weight: 800 ;
+    line-height: 1.3333333333333333em ;
+    letter-spacing: 0.08333333333333333em ;
+    color: #484848 ;
+
+}
+
+.check-in .check-out {
+    width: 50% ;
+    display: inline-block ;
+    overflow: hidden ;
+}
+
+.guests-input{
+     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    // background-color: #fff;
+    // margin: 0;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    box-sizing: border-box;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    background-color: #fff;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+
+     margin: 0px ;
+    word-wrap: break-word ;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+    font-size: 12px ;
+    font-weight: 800 ;
+    line-height: 1.3333333333333333em ;
+    letter-spacing: 0.08333333333333333em ;
+    color: #484848 ;
+}
+
+.search-button-container{
+        box-sizing: border-box;
+        text-align: right;
+       position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.search-button-container button{
+     border-radius: var(--border-button-border-radius, 4px) ;
+    font-size: var(--font-button-font-size, 16px) ;
+    line-height: var(--font-button-line-height, 24px) ;
+    letter-spacing: var(--font-button-letter-spacing, normal) ;
+    font-family: var(--font-button-font-family, Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif) ;
+    text-transform: var(--font-button-text-transform, undefined) ;
+    padding-top: var(--spacing-button-vertical, 10px) ;
+    padding-bottom: var(--spacing-button-vertical, 10px) ;
+    font-weight: var(--font-bold-font-weight, 800) ;
+    border-width: var(--border-button-border-width, 2px) ;
+    padding-left: var(--spacing-button-horizontal, 22px) ;
+    padding-right: var(--spacing-button-horizontal, 22px) ;
+    box-shadow: var(--shadow-button-level0-box-shadow, none) ;
+    background: var(--color-buttons-primary-color, #FF5A5F) ;
+    border-color: var(--color-buttons-primary-border, transparent) ;
+    color: var(--color-buttons-primary-text, #ffffff) ;
+}
