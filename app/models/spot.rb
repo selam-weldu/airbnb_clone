@@ -13,8 +13,8 @@
 #  price        :float            not null
 #  location     :string           not null
 #  loc_detail   :string
-#  latitude     :float            not null
-#  longitude    :float            not null
+#  lat          :float            not null
+#  lng          :float            not null
 #  host_id      :integer          not null
 #  wifi         :boolean          default(TRUE)
 #  washer       :boolean          default(TRUE)
@@ -28,7 +28,7 @@
 
 class Spot < ApplicationRecord
 
-    validates :title, :host_id, :price, :location, :latitude, :longitude, presence: true
+    validates :title, :host_id, :price, :location, :lat, :lng, presence: true
 
 
     has_many_attached :photos
@@ -36,6 +36,23 @@ class Spot < ApplicationRecord
     belongs_to :host,
         foreign_key: :host_id,
         class_name: :User 
+
+    # def self.in_bounds(bounds)
+    #     bounds = JSON.parse(bounds)
+    #     self.where("lat < ?", bounds[:northEast][:lat])
+    #         .where("lat > ?", bounds[:southWest][:lat])
+    #         .where("lng > ?", bounds[:southWest][:lng])
+    #         .where("lng < ?", bounds[:northEast][:lng])
+    # end
+
+    def self.in_bounds(bounds)
+    bounds = JSON.parse(bounds)
+
+    self.where('lat < ?', bounds["northEast"]["lat"].to_f)
+      .where('lat >?', bounds["southWest"]["lat"].to_f)
+      .where('lng < ?', bounds["northEast"]["lng"].to_f)
+      .where('lng > ?', bounds["southWest"]["lng"].to_f)
+  end
 end
     
     

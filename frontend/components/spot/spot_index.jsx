@@ -2,14 +2,15 @@ import React from 'react';
 import SpotIndexItem from './spot_index_item';
 
 
+
 class SpotIndex extends React.Component {
     constructor(props) {
         super(props);
     }
 
-   componentDidMount(){
-       this.props.fetchSpots();
-   }
+//    componentDidMount(){
+//        this.props.fetchSpots();
+//    }
 
     render() {
         
@@ -41,9 +42,11 @@ class SpotIndex extends React.Component {
                         </div>
                     </div>
 
+
                     <div className="spot-container">
                         <ul className="spot-ul">{spots}</ul>
                     </div>
+
 
                 </div>
             </div>

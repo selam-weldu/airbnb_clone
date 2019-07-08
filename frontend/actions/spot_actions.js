@@ -16,10 +16,10 @@ const receiveSpot = spot => ({
 
 
 
-export const fetchSpots = () => dispatch => {
+export const fetchSpots = (filters) => dispatch => {
     // debugger
     return(
-        SpotAPIUtil.fetchSpots()
+        SpotAPIUtil.fetchSpots(filters)
             .then(spots => (dispatch(receiveSpots(spots))
         ))
     )

@@ -19,7 +19,7 @@ const SpotIndexItem = ({ spot }) => {
                             <img src={spot.photoUrls[4]} className="spot-photos"/>
                             <img src={spot.photoUrls[5]} className="spot-photos"/>
                             <img src={spot.photoUrls[6]} className="spot-photos"/>
-                            <img src={spot.photoUrls[7]} className="spot-photos"/>
+                            {/* <img src={spot.photoUrls[7]} className="spot-photos"/> */}
                         </Carousel>
                      </div>
 

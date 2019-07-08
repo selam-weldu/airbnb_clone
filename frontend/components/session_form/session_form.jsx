@@ -11,11 +11,13 @@ class SessionForm extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemoLogin = this.handleDemoLogin.bind(this);
+        this.usernameTyper = this.usernameTyper.bind(this);
+        this.passwordTyper = this.passwordTyper.bind(this);
     }
 
-    // componentWillMount(){
-    //     this.props.clearErrors();
-    // }
+    componentWillMount(){
+        this.props.clearErrors();
+    }
 
     update(field) {
         return e => this.setState({
@@ -30,8 +32,7 @@ class SessionForm extends React.Component {
             // .then(this.props.errors.fill(""));
     }
 
-    handleDemoLogin(e) {
-        e.preventDefault();
+    handleDemoLogin() {
         const demoUser = {
             username: 'sweldu',
             password: 'password',
@@ -74,16 +75,55 @@ class SessionForm extends React.Component {
     }
 
     demoUserButton() {
-        if (this.props.formType === 'login') {
+        if (this.props.formType === 'login' || this.props.formType === 'signup') {
             return (
                 <input className="session-submit-demo"
                     type="submit"
                     value="Demo Login"
-                    onClick={this.handleDemoLogin}
+                    onClick={this.usernameTyper}
                 />
             )
         }
     }
+
+    // /// automated demoLogin
+
+    usernameTyper() {
+        let i = 0;
+        let username = ' sweldu'
+        const speed = 75; /* The speed/duration of the effect in milliseconds */
+        let username_field = document.getElementById("username");
+        username_field.value = "";
+
+        const typeWriter = () => {
+            if (i < username.length) {
+                username_field.value += username.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        };
+
+        typeWriter();
+        setTimeout(this.passwordTyper, 1000);
+        setTimeout(this.handleDemoLogin, 1900);
+    };
+
+    passwordTyper() {
+        let i = 0;
+        const password = 'password'
+        const speed = 75; /* The speed/duration of the effect in milliseconds */
+        let password_field = document.getElementById("password");
+        password_field.value = "";
+
+        const typeWriter = () => {
+            if (i < password.length) {
+                password_field.value += password.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        };
+        typeWriter();
+    };
 
 
 

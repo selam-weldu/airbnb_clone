@@ -13,8 +13,8 @@
 #  price        :float            not null
 #  location     :string           not null
 #  loc_detail   :string
-#  latitude     :float            not null
-#  longitude    :float            not null
+#  lat          :float            not null
+#  lng          :float            not null
 #  host_id      :integer          not null
 #  wifi         :boolean          default(TRUE)
 #  washer       :boolean          default(TRUE)

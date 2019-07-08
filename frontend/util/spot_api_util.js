@@ -1,12 +1,21 @@
-export const fetchSpots = () => {
+// export const fetchSpots = (data) => {
+//     // debugger
+//     return (
+//         $.ajax({
+//             method: 'Get',
+//             url: '/api/spots',
+//             data
+//         })
+//     )
+// };
+
+export const fetchSpots = (filters) => {
     // debugger
-    return (
-        $.ajax({
-            method: 'Get',
-            url: '/api/spots'
-        })
-    )
-};
+    return $.ajax({
+        method: "GET",
+        url: `/api/spots?bounds=${JSON.stringify(filters.bounds)}`
+    });
+}
 
 export const fetchSpot = id => (
     $.ajax({
