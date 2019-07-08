@@ -3,7 +3,6 @@
 //   background: white;
 //   border-radius: 4px;
 //   width: 365px;
-//   box-shadow: 0 16px 40px rgba(0,0,0,0.12);
 //   padding: 32px 32px 24px;
 //   font-weight: 900;
 //   top: 15%;
@@ -93,6 +92,7 @@
 * {
   box-sizing: border-box;
 }
+
 .nav-container {
   overflow: hidden;
   /* position: fixed; */
@@ -148,38 +148,38 @@
     width: 93px;
 }
 
-/* NAV BAR 2: */
+/* index nav bar: */
 
 .nav2-head {
   position: fixed;
   z-index: 100;
   background: white;
   width: 100%;
+  margin-left: 5px;
 }
 
 .nav2-head *{
   /* z-index: 100; */
-  background:  whitergb(248, 246, 246)
+  background: white;
 }
 
 .nav2-container {
-  display: flex;                  
-  flex-direction: row;            
-  flex-wrap: nowrap;              
-  justify-content: space-between;
-  height: 89px;
-  border-bottom: 1px solid rgb(226, 226, 226);
-  background: white;
-  margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 89px;
+    border-bottom: 1px solid #e2e2e2;
+    background: white;
+    margin-left: 0;
 }
 
 .nav2-buttons-container {
-  width: 35%
+  width: 35%;
 }
 
 .nav2-search-container {
-    background: white;
-
+  background: white;
   width: 65%;
   display: flex;
   flex-direction: row;            
@@ -204,7 +204,7 @@
 }
 
 .nav2-button:hover {
-  border-bottom:3px solid
+  border-bottom:3px solid black;
 }
 
 .nav2-search-outer {
@@ -224,7 +224,7 @@
     /* z-index: 10; */
   // background: white;
 
-      background-size: 10vw 6vw;
+    background-size: 10vw 6vw;
     margin-right: 5px;
     margin-top: 5px;
     /* z-index: 10; */
@@ -249,8 +249,8 @@
 
     /* z-index: 50; */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1) ;
-    transition: box-shadow 200ms ease-in !important;
-    border: 1px solid #EBEBEB !important;
+    transition: box-shadow 200ms ease-in;
+    border: 1px solid #EBEBEB;
 }
 
 .nav2-search-inner:hover {

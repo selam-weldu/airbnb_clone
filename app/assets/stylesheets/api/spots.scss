@@ -1,10 +1,8 @@
-// Place all the styles related to the api/spots controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
 * {
     box-sizing: border-box;
 }
+
 .spot-index-item{
     padding-left: 8px; 
     padding-right: 8px; 
@@ -63,6 +61,7 @@
 .spot-short-info {
     padding-right: 40px;
     line-height: 1.43;
+    margin-top: 10px;
 }
 
 .plus {
@@ -102,6 +101,7 @@
     font-weight: 600 ;
     color: rgb(72, 72, 72) ;
     -webkit-font-smoothing: antialiased;
+    // margin-top: 5px;
 }
 
 .spot-details .amenities {
@@ -152,9 +152,9 @@ p:nth-child(2) {
 
 .right-side {
     width: 1100px;
+    height: 1000px;
     margin-left: 30px;
     margin-top: 40px;
-    height: 1000px;
     /* overflow-y: scroll; */
     padding: 0 20px 20px 20px;
     float: right;
@@ -166,15 +166,18 @@ p:nth-child(2) {
  .spots-header {
     letter-spacing: normal;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-    color: rgb(72, 72, 72);
+    color: #484848;
     padding-top: 2px;
     padding-bottom: 2px;
     font-size: 24px;
     line-height: 26px;
     font-weight: 800;
     text-align: left;
-    margin-left: 30px;
- }
+    margin-left: 32px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
 
  .spots-container{
     margin-right: 0;
