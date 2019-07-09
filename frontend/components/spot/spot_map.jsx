@@ -1,33 +1,59 @@
 import React from 'react';
 import MarkerManager from '../../util/marker_manager';
+import { withRouter } from 'react-router-dom';
 
 class SpotMap extends React.Component {
     constructor(props) {
         super(props);
+        this.renderMap = this.renderMap.bind(this);
     }
 
     componentDidMount() {
 
+        // let newLat, newLng;
 
-        const mapOptions = {
-            center: {
-                lat: 37.7758, 
-                lng: -122.435
-                // lat: this.props.search.lat,
-                // lng: this.props.search.lng 
-            }, 
-            zoom: 13
-        };
+        // if(this.props.search){
+            // debugger
+        //     newLat = this.props.search.lat;
+        //     newLng = this.props.search.lng 
+        // } else {
+        //     newLat = 37.7758;
+        //     newLng = -122.435;
+        // }
 
-        this.map = new google.maps.Map(this.mapNode, mapOptions);
-        this.MarkerManager = new MarkerManager(this.map);
+        // const mapOptions = {
+        //     center: {
+        //         lat: parseFloat(newLat), 
+        //         lng: parseFloat(newLng)
+        //     }, 
+        //     zoom: 13
+        // };
 
-        this.registerListeners();
-        this.MarkerManager.updateMarkers(this.props.spots);
+        
+        // const mapOptions = {
+        //     center: {
+        //         lat: 37.7758, 
+        //         lng: -122.435
+        //     }, 
+        //     zoom: 13
+        // };
+
+
+        // this.map = new google.maps.Map(this.mapNode, mapOptions);
+        // this.MarkerManager = new MarkerManager(this.map);
+
+        // this.registerListeners();
+        // this.MarkerManager.updateMarkers(this.props.spots);
+
+        this.renderMap();
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps) {
         this.MarkerManager.updateMarkers(this.props.spots);
+        if (prevProps.location.search != this.props.location.search){
+            debugger
+            this.renderMap()
+        }
     }
 
     registerListeners() {
@@ -43,6 +69,49 @@ class SpotMap extends React.Component {
         });
     }
 
+    renderMap(){
+
+        let newLat, newLng;
+
+        if (this.props.search) {
+            // debugger
+            newLat = this.props.search.lat;
+            newLng = this.props.search.lng
+        } else {
+            newLat = 37.7758;
+            newLng = -122.435;
+        }
+
+        const mapOptions = {
+            center: {
+                lat: parseFloat(newLat),
+                lng: parseFloat(newLng)
+            },
+            zoom: 13
+        };
+
+
+        // const mapOptions = {
+        //     center: {
+        //         lat: 37.7758, 
+        //         lng: -122.435
+        //     }, 
+        //     zoom: 13
+        // };
+
+
+        this.map = new google.maps.Map(this.mapNode, mapOptions);
+        this.MarkerManager = new MarkerManager(this.map);
+
+        this.registerListeners();
+        this.MarkerManager.updateMarkers(this.props.spots);
+
+    }
+
+    componentWillUnmount(){
+        google.maps.event.clearListeners(this.map,'idle');
+    }
+
 
 
     render() {
@@ -55,4 +124,4 @@ class SpotMap extends React.Component {
     }
 }
 
-export default SpotMap;
+export default withRouter(SpotMap);

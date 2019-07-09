@@ -1,0 +1,242 @@
+button {
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+}
+
+input {
+  border-radius: 4px;
+}
+
+input:focus {
+  outline: 1px solid teal;
+  border-radius: 4px;
+}
+
+.splash {
+  background-image: url('/bus2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-width: 100%;
+
+  height: 789px;
+
+  /* position: fixed; */
+  /* overflow: scroll; */
+
+}
+
+.splash-body {
+  /* margin-bottom: 89px; */
+  position: relative;
+  height: 700px;
+  overflow: scroll;
+}
+
+
+.splash-search-container {
+  position: absolute;
+  margin-left: 13.5%;
+  margin-right: 15%;
+  margin-top: 31px;
+  margin-bottom: 5%;
+  overflow: visible;
+}
+
+.splash-search {
+  height: 470px;
+  width: 440px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 32px;
+  /* overflow: scroll; */
+}
+
+.splash-search-head {
+  width: 100%;
+  height: 75px;
+}
+
+.splash-head-text {
+  color: rgb(75, 73, 73);
+  font-weight: bold;
+  outline: none;
+  font-size: 35px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.splash-search-inputs {
+  height: 330px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* overflow: scroll; */
+}
+
+.splash-input-container {
+  height: 64px;
+  margin-bottom: 16px;
+  /* vertical-align: top; */
+  display: inline-block;
+  width: 100%;
+  /* overflow: scroll; */
+}
+
+.splash-dates {
+  display: flex;
+  flex-direction: row;
+}
+
+.splash-input-div-date {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  width: 50%;
+  margin-bottom: 8px;
+  /* margin-top: 10px; */
+  border-radius: 4px;
+  /* border: 1px solid #e8e8e8; */
+  overflow: hidden;
+  /* overflow: scroll; */
+}
+
+.react-datepicker-wrapper {
+  height: 50px;
+}
+
+.react-datepicker__input-container {
+  height: 100%;
+  width: 100%;
+}
+
+.react-datepicker__input-container > * {
+  height: 100%;
+  width: 100%;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+    padding-left: 13px;
+    padding-right: 5px;
+    color: #807b7b;
+}
+
+.splash-input-label {
+  margin-bottom: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* letter-spacing: 1px; */
+  font-weight: 600;
+}
+
+.splash-input-div {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  border-radius: 4px;
+  /* border: 1px solid #e8e8e8; */
+  overflow: hidden;
+  /* overflow: scroll; */
+}
+
+.splash-input {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  /* margin-top: 9px; */
+  /* margin-left: 10px;   */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  padding-left: 13px;
+  padding-right: 5px;
+  /* outline: teal 1px; */
+  /* border: none; */
+  
+}
+
+.splash-submit-wrap {
+  height: 47px;
+  border-radius: 4px;
+
+//  box-sizing: border-box;
+//         text-align: right;
+//        position: absolute;
+//     bottom: 0px;
+//     right: 0px;
+}
+
+.splash-submit {
+  width: 100px;
+  height: 100%;
+  background:  #FF5A5F;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 1px;
+  margin-left: 277px;
+border-color: transparent;
+
+
+    // border-radius: var(--border-button-border-radius, 4px) ;
+    // font-size: var(--font-button-font-size, 16px) ;
+    // line-height: var(--font-button-line-height, 24px) ;
+    // letter-spacing: var(--font-button-letter-spacing, normal) ;
+    // font-family: var(--font-button-font-family, Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif) ;
+    // text-transform: var(--font-button-text-transform, undefined) ;
+    // padding-top: var(--spacing-button-vertical, 10px) ;
+    // padding-bottom: var(--spacing-button-vertical, 10px) ;
+    // font-weight: var(--font-bold-font-weight, 800) ;
+    // border-width: var(--border-button-border-width, 2px) ;
+    // padding-left: var(--spacing-button-horizontal, 22px) ;
+    // padding-right: var(--spacing-button-horizontal, 22px) ;
+    // box-shadow: var(--shadow-button-level0-box-shadow, none) ;
+    // background: var(--color-buttons-primary-color, #FF5A5F) ;
+    // border-color: var(--color-buttons-primary-border, transparent) ;
+    // color: var(--color-buttons-primary-text, #ffffff) ;
+}
+
+.splash-guests {
+  width: 100%;
+  border: none;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+}
+
+.footer-container {
+  height: 89px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.993);
+  color: white;
+}
+
+.footer-container2 {
+  height: 100%;
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.personal {
+      overflow-wrap: break-word !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.28571em !important;
+    /* color: rgb(118, 118, 118) */
+    color: white;
+    text-decoration: none;
+}

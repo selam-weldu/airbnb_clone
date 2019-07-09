@@ -48,14 +48,15 @@ class SearchBar extends React.Component {
 
                     {/* search bar on spots index page */}
 
-                        {/* <input
+                         <input
+                         
                             onChange={this.handleChange}
                             value={this.state.address}
                             type="text" 
                             placeholder="Try &quot;San Francisco&quot;" 
                             id="nav2-search"
-                            onKeyPress={this.handleKeyDown} /> */}
-                            <AutoSearchBar/>
+                            onKeyPress={this.handleKeyDown} /> 
+                            {/* <AutoSearchBar/> */}
 
                     </div>
                 </div>
@@ -65,6 +66,12 @@ class SearchBar extends React.Component {
 }
 
 export default SearchBar;
+
+
+
+///////////////////////////////////// autocomplete
+
+
 
 
 

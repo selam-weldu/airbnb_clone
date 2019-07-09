@@ -3,6 +3,7 @@ import SpotMap from '../spot/spot_map';
 import SpotIndex from '../spot/spot_index';
 import NavBarIndex from '../navbar_index/navbar_index';
 // import SearchBar from './search_bar';
+import SpotMapContainer from '../spot/spot_map_container';
 
 
 class Search extends React.Component {
@@ -20,10 +21,11 @@ class Search extends React.Component {
                 
                 <div className="index-map">
                     <div className="right-side">
-                        <SpotMap
+                        {/* <SpotMap
                             spots={this.props.spots}
                             updateFilter={this.props.updateFilter}
-                            search={this.props.search} />
+                            search={this.props.search} /> */}
+                            <SpotMapContainer/>
                     </div>
 
                     <div className="left-side">
