@@ -8,6 +8,7 @@ import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 const App = () => (
         <div>
             <Switch>
+                {/* <Route path="/spots/:spotId" component={SpotShowContainer}/> */}
                 <Route path="/spots" component={SearchContainer} />
                 <Route path="/" component={Splash} />
             </Switch>    
