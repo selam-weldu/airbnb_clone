@@ -57,8 +57,8 @@ class NewSearchForm extends React.Component {
     }
 
     render() {
-        const guests = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
-            <option className="splash-guests" value={num} placeholder="Guests" key={String(num)} >{num}</option>
+        const guests = [1, 2, 3, 4].map(num => (
+            <option className="guests-list" value={num} placeholder="Guests" key={String(num)} >{num}</option>
         ))
         return (
             <div className="splash-body">

@@ -30,18 +30,17 @@ input:focus {
 }
 
 .splash-body {
-  /* margin-bottom: 89px; */
   position: relative;
   height: 700px;
-  overflow: scroll;
+
 }
 
 
 .splash-search-container {
   position: absolute;
-  margin-left: 13.5%;
+  margin-left: 10%;
   margin-right: 15%;
-  margin-top: 31px;
+  margin-top: 17px;
   margin-bottom: 5%;
   overflow: visible;
 }
@@ -61,11 +60,21 @@ input:focus {
 }
 
 .splash-head-text {
-  color: rgb(75, 73, 73);
-  font-weight: bold;
-  outline: none;
-  font-size: 35px;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  // color: rgb(75, 73, 73);
+  // font-weight: bold;
+  // outline: none;
+  // font-size: 35px;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+
+    color: #4b4949;
+    font-weight: bold;
+    outline: none;
+    font-size: 35px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0px;
+    padding: 0px;
 }
 
 .splash-search-inputs {
@@ -116,8 +125,8 @@ input:focus {
 .react-datepicker__input-container > * {
   height: 100%;
   width: 100%;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 17px;
     border-radius: 4px;
     border: 1px solid #e8e8e8;
     padding-left: 13px;
@@ -127,9 +136,13 @@ input:focus {
 
 .splash-input-label {
   margin-bottom: 10px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  /* letter-spacing: 1px; */
   font-weight: 600;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+  font-size: 12px ;
+  line-height: 1.3333333333333333em ;
+  letter-spacing: 0.08333333333333333em ;
+  color: #484848 ;
+
 }
 
 .splash-input-div {
@@ -151,7 +164,7 @@ input:focus {
   /* margin-top: 9px; */
   /* margin-left: 10px;   */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
+  font-size: 17px;
   border-radius: 4px;
   border: 1px solid #e8e8e8;
   padding-left: 13px;
@@ -180,7 +193,7 @@ input:focus {
   border-radius: 4px;
   font-size: 16px;
   font-weight: 800;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   letter-spacing: 1px;
   margin-left: 277px;
 border-color: transparent;
@@ -190,7 +203,7 @@ border-color: transparent;
     // font-size: var(--font-button-font-size, 16px) ;
     // line-height: var(--font-button-line-height, 24px) ;
     // letter-spacing: var(--font-button-letter-spacing, normal) ;
-    // font-family: var(--font-button-font-family, Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif) ;
+    font-family: var(--font-button-font-family, Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif) ;
     // text-transform: var(--font-button-text-transform, undefined) ;
     // padding-top: var(--spacing-button-vertical, 10px) ;
     // padding-bottom: var(--spacing-button-vertical, 10px) ;
@@ -205,11 +218,20 @@ border-color: transparent;
 }
 
 .splash-guests {
-  width: 100%;
-  border: none;
-  background: white;
-  border-radius: 4px;
-  border: 1px solid #e8e8e8;
+    background: none ;
+    position: relative ;
+    text-align: left ;
+    border: 1px solid #EBEBEB ;
+    border-radius: 3px ;
+    padding: 11px ;
+    padding-top: 8px ;
+    font-size: 16px ;
+    font-weight: 400 ;
+    line-height: normal ;
+    display: block ;
+    width: 100% ;
+    height: 48px ;
+    color: #767676 ;
 }
 
 .footer-container {
@@ -239,4 +261,23 @@ border-color: transparent;
     /* color: rgb(118, 118, 118) */
     color: white;
     text-decoration: none;
+}
+
+.guests-list{
+ position: absolute !important;
+    z-index: 3000 !important;
+    min-width: 280px !important;
+    text-align: left !important;
+    line-height: 1em !important;
+    font-size: 14px !important;
+    box-shadow: rgba(26, 26, 29, 0.3) 0px 15px 46px -10px !important;
+    width: 100% !important;
+    left: 0px !important;
+    background: rgb(255, 255, 255) !important;
+    padding: 16px 24px 8px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: rgb(235, 235, 235) !important;
+    border-image: initial !important;
+    border-radius: 3px !important;
 }

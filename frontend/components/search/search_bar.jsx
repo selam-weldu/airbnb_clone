@@ -1,5 +1,6 @@
 import React from 'react';
 import AutoSearchBar from './autocomplete';
+// import { Searchbar } from 'react-native-paper';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -49,7 +50,6 @@ class SearchBar extends React.Component {
                     {/* search bar on spots index page */}
 
                          <input
-                         
                             onChange={this.handleChange}
                             value={this.state.address}
                             type="text" 
@@ -57,6 +57,12 @@ class SearchBar extends React.Component {
                             id="nav2-search"
                             onKeyPress={this.handleKeyDown} /> 
                             {/* <AutoSearchBar/> */}
+
+                            {/* <Searchbar 
+                                placeholder="Try &quot;San Francisco&quot;"
+                                onChangeText={query => {this.setState({address: query});}}
+                                value={this.state.address}
+                                onIconPress={this.handleKeyDown}/> */}
 
                     </div>
                 </div>
