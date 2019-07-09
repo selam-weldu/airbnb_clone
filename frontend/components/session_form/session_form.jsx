@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
 
     handleDemoLogin() {
         const demoUser = {
-            username: 'sweldu',
+            username: 'guestuser',
             password: 'password',
         };
         this.props.processForm(demoUser).then(() => this.props.closeModal());
@@ -43,15 +43,15 @@ class SessionForm extends React.Component {
 
 
     handleErrors() {
-        return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
+        // return (
+        //     <ul>
+        //         {this.props.errors.map((error, i) => (
+        //             <li key={`error-${i}`}>
+        //                 {error}
+        //             </li>
+        //         ))}
+        //     </ul>
+        // );
 
         // let errors = this.props.errors;
 
