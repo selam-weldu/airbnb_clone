@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from 'nuka-carousel';
+import { Link } from 'react-router-dom';
 
 
 const SpotIndexItem = ({ spot }) => {
@@ -8,6 +9,7 @@ const SpotIndexItem = ({ spot }) => {
 
     return (
         <div className="spot-index-item">
+                <Link className="link" to={`/spots/${spot.id}`}>
             <li className="spot-li">
                
                      <div className="spot-photos">
@@ -49,6 +51,7 @@ const SpotIndexItem = ({ spot }) => {
                     </div>
                 </div>
             </li>
+                </Link>
         </div>
     )
 };
