@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchForm from '../search/search_form';
+import AutoSearchBar from './autocomplete';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -48,13 +48,14 @@ class SearchBar extends React.Component {
 
                     {/* search bar on spots index page */}
 
-                        <input
+                        {/* <input
                             onChange={this.handleChange}
                             value={this.state.address}
                             type="text" 
                             placeholder="Try &quot;San Francisco&quot;" 
                             id="nav2-search"
-                            onKeyPress={this.handleKeyDown} />
+                            onKeyPress={this.handleKeyDown} /> */}
+                            <AutoSearchBar/>
 
                     </div>
                 </div>

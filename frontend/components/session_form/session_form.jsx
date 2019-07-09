@@ -128,12 +128,12 @@ class SessionForm extends React.Component {
 
 
     render() {
+        // this.props.clearErrors();
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     
                     <div onClick={this.props.closeModal} className="close-x">&times;</div>
-                    {/* <div onClick={this.props.closeModal} className="close-x">X</div> */}
                     {this.handleErrors()}
                     <div className="form-logo-header"></div>
                     <div className="login-form">
