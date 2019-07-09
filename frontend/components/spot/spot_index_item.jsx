@@ -28,12 +28,7 @@ const SpotIndexItem = ({ spot }) => {
                     <div className="spot-short-info">
                         <span className="plus">PLUS  </span>
                         <span className="spot-type">  VERIFIED &middot; {spot.listing_type}</span>
-                        <span> 
-                            {/* &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; */}
-                            {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
-                            <i className="far fa-heart heart"></i>
-                        </span>
+                        <span> <i className="far fa-heart heart"></i></span>
                         <div className="spot-title">{spot.title}</div>
                         <div className="spot-details">
                             <span>{spot.num_guests} guests &middot; </span>

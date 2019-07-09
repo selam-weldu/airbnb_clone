@@ -8,10 +8,13 @@ class SpotMap extends React.Component {
 
     componentDidMount() {
 
+
         const mapOptions = {
             center: {
-                lat: 37.7758, // this.props.search.lat
-                lng: -122.435 
+                lat: 37.7758, 
+                lng: -122.435
+                // lat: this.props.search.lat,
+                // lng: this.props.search.lng 
             }, 
             zoom: 13
         };

@@ -29,11 +29,13 @@ class SearchForm extends React.Component {
                 lng = results[0].geometry.location.lng()
                 this.props.receiveSearch({lat,lng});
                 this.props.history.push(`/spots?lat=${lat}&lng=${lng}/`)
-            }
-            
+            } else {
+                lat = 37.7558;
+                lng = -122.435;
+                this.props.receiveSearch({ lat, lng })
+                this.props.history.push(`/spots?lat=${lat}&lng=${lng}`)
+            }   
         })
-
-
     }
 
     render() {

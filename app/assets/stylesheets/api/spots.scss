@@ -150,7 +150,10 @@ p:nth-child(2) {
    height: 800px;
 }
 
-
+.index-map {
+    display: flex;
+    justify-content: space-between;
+}
 
 .right-side {
     width: 1100px;
@@ -159,7 +162,7 @@ p:nth-child(2) {
     margin-top: 40px;
     /* overflow-y: scroll; */
     padding: 0 20px 20px 20px;
-    float: right;
+    // float: right;
     position: fixed;
     top: 0;
     right: 1px;

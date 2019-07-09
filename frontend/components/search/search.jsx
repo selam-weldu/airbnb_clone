@@ -18,18 +18,21 @@ class Search extends React.Component {
                     <NavBarIndex/>
                 </div>
                 
-                <div className="right-side">
-                    <SpotMap
-                        spots={this.props.spots}
-                        updateFilter={this.props.updateFilter} />
-                </div>
+                <div className="index-map">
+                    <div className="right-side">
+                        <SpotMap
+                            spots={this.props.spots}
+                            updateFilter={this.props.updateFilter}
+                            search={this.props.search} />
+                    </div>
 
-                <div className="left-side">
-                    <SpotIndex
-                        spots={this.props.spots}
-                        fetchSpots={this.props.fetchSpots}
-                        fetchSpot={this.props.fetchSpot}
-                    />
+                    <div className="left-side">
+                        <SpotIndex
+                            spots={this.props.spots}
+                            fetchSpots={this.props.fetchSpots}
+                            fetchSpot={this.props.fetchSpot}
+                        />
+                    </div>
                 </div>
 
             </div>

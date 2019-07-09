@@ -5,7 +5,8 @@ import { updateFilter } from '../../actions/filter_actions';
 
 
 const msp = state => ({
-    spots: Object.values(state.entities.spots)
+    spots: Object.values(state.entities.spots),
+    search: state.ui.search
 })
 
 const mdp = dispatch => {
