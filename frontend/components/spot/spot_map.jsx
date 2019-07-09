@@ -9,42 +9,6 @@ class SpotMap extends React.Component {
     }
 
     componentDidMount() {
-
-        // let newLat, newLng;
-
-        // if(this.props.search){
-            // debugger
-        //     newLat = this.props.search.lat;
-        //     newLng = this.props.search.lng 
-        // } else {
-        //     newLat = 37.7758;
-        //     newLng = -122.435;
-        // }
-
-        // const mapOptions = {
-        //     center: {
-        //         lat: parseFloat(newLat), 
-        //         lng: parseFloat(newLng)
-        //     }, 
-        //     zoom: 13
-        // };
-
-        
-        // const mapOptions = {
-        //     center: {
-        //         lat: 37.7758, 
-        //         lng: -122.435
-        //     }, 
-        //     zoom: 13
-        // };
-
-
-        // this.map = new google.maps.Map(this.mapNode, mapOptions);
-        // this.MarkerManager = new MarkerManager(this.map);
-
-        // this.registerListeners();
-        // this.MarkerManager.updateMarkers(this.props.spots);
-
         this.renderMap();
     }
 
@@ -89,15 +53,6 @@ class SpotMap extends React.Component {
             },
             zoom: 13
         };
-
-
-        // const mapOptions = {
-        //     center: {
-        //         lat: 37.7758, 
-        //         lng: -122.435
-        //     }, 
-        //     zoom: 13
-        // };
 
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);

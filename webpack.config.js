@@ -19,11 +19,14 @@ module.exports = {
                         presets: ['@babel/env', '@babel/react']
                     }
                 },
-            }
+            },
+            { test: /\.css$/, loader: "style-loader!css-loader" },
+            { test: /\.png$/, loader: "url-loader?limit=100000" },
+            { test: /\.jpg$/, loader: "file-loader" }
         ]
     },
     devtool: 'inline-source-map',
     resolve: {
-        extensions: [".js", ".jsx", "*"]
+        extensions: [".js", ".jsx", ".css", "*"]
     }
 };

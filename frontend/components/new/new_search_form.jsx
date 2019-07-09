@@ -1,7 +1,9 @@
-import React from 'react';
-// import DatePicker from "react-datepicker";
-// import "react-datepicker/dist/react-datepicker.css";
-// import { withRouter } from 'react-router-dom';
+import React from "react";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
+
+import { withRouter } from 'react-router-dom';
 
 class NewSearchForm extends React.Component {
     constructor(props) {
@@ -83,22 +85,22 @@ class NewSearchForm extends React.Component {
 
                                         <div className="splash-input-div-date">
                                             <p className="splash-input-label">CHECK-IN</p>
-                                                <input type="date" />
-                                            {/* <DatePicker
+                                                {/* <input type="date" /> */}
+                                            <DatePicker
                                                 selected={this.state.check_in}
                                                 onChange={this.handleChange1}
                                                 placeholder="mm/dd/yyyy"
-                                            /> */}
+                                            />
                                             {/* <input className="splash-input" type="text" placeholder="mm/dd/yyyy" /> */}
                                         </div>
 
                                         <div className="splash-input-div-date">
                                             <p className="splash-input-label">CHECK-OUT</p>
-                                                <input type="date" />
-                                            {/* <DatePicker
+                                                {/* <input type="date" /> */}
+                                            <DatePicker
                                                 selected={this.state.check_out}
                                                 onChange={this.handleChange2}
-                                            /> */}
+                                            />
                                             {/* <input className="splash-input" type="text" placeholder="mm/dd/yyyy" /> */}
                                         </div>
 

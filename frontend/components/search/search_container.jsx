@@ -18,5 +18,4 @@ const mdp = dispatch => {
 }
 
 
-// export default connect(msp, mdp)(SpotIndex);
 export default connect(msp, mdp)(Search);

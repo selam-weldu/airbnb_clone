@@ -10,8 +10,6 @@ const msp = (state, ownProps) => {
     return {
         spots: Object.values(state.entities.spots),
         search: state.ui.search
-        // bounds: state.ui.filters.bounds,
-        // filters: state.ui.filters
     }
 }
 
