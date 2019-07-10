@@ -1,13 +1,24 @@
 .spot-show-main{
     width:1835px;
     height:691px;
+    position: relative;
 }
 
 .show-bottom{
     max-width: 1760px;
+    height: 100%;
     padding-left: 80px;
     padding-right: 80px;
-        position: relative ;
-    margin-left: auto ;
-    margin-right: auto ;
+    position: absolute;
+    top: 816px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spot-host{
+    width: 1616px;
+    height: 120px;
+    display: block;
+    display: flex;
+    justify-content: space-between;
 }

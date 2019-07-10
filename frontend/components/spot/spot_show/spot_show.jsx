@@ -37,20 +37,22 @@ class SpotShow extends React.Component{
                 </div>
 
                 <div className="show-bottom">
+                    <div className="spot-host">
+                        <div>
+                            <SpotDetail
+                                spot={this.props.spot}/>
+                        </div>
 
-                    {/* <div>
-                        <SpotDetail
-                            spot={this.props.spot}/>
-                    </div> */}
+                        {/* <div>
+                            <MiniHostInfo
+                                host={this.props.host}/>
+                        </div> */}
+                    </div>
 
-                    {/* <div>
-                        <MiniHostInfo/>
-                    </div> */}
-
-                    {/* <div>
+                    <div>
                         <SpotPhotos
                             photoUrls={this.props.spot.photoUrls}/>
-                    </div> */}
+                    </div>
 
                     <div>
                         {/* <SpotAmenities/> */}
@@ -61,11 +63,11 @@ class SpotShow extends React.Component{
                             host={this.props.host}/>
                     </div> */}
 
-                    {/* <div>
+                    <div>
                         <Location
                             location={this.props.spot.location}
                             loc_detail={this.props.spot.loc_detail}/>
-                    </div> */}
+                    </div>
                 </div>
 
             </div>

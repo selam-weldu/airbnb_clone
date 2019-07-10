@@ -2,10 +2,10 @@ import React from 'react';
 
 const MiniHostInfo = () => {
     return (
-        <div className="show-photos-container">
+        <div className="mini-host-container">
             <div className="photos-header"> Tour </div>
             <div className="spot-photos">
-                <div>photos for the Tour</div>
+                <div>photos for the host</div>
             </div>
         </div>
     )

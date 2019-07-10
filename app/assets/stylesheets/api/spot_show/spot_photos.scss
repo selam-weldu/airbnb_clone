@@ -1,27 +1,42 @@
 .show-photos-container{
-    width: 1600px;
-    height:736px;
+        width: 1600px;
+    height: 736px;
+    margin-top: 102px;
+    margin-bottom: 72px;
 }
 
 .photos-header{
-    font-size: 36px ;
-    line-height: 40px ;
+   font-size: 36px;
+    line-height: 40px;
     letter-spacing: normal;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-    color: rgb(72, 72, 72);
+    color: #484848;
     font-weight: 800;
+    padding-top: 39px;
+    padding-bottom: 25px;
+    padding-left: 10px;
 }
 
-.spot-photos{
+.spot-photoss{
     width:1600px;
     height: 602px;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
-.photos{
+.photoss{
     width: 25% ;
     padding-left: 8px ;
     padding-right: 8px ;
     padding-bottom: 16px ;
     display: inline-block ;
     vertical-align: top ;
+}
+
+.thin-line-show{
+    margin: -.5vw auto .5vw auto;
+    height: .25px;
+    min-width: 70%;
+    border: .5px solid #d2d2d2a1;
+    margin-bottom: 20px;
 }

@@ -12,7 +12,7 @@ const Location = () => {
             <p>San Francisco, California, United States</p>
         </div>
 
-        <div className="show_map">
+        <div className="show-map">
             <SpotMapContainer/>
         </div>
          
