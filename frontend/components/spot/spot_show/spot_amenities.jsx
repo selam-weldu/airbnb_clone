@@ -8,64 +8,83 @@ const SpotAmenities = () => {
             </div>
 
             <div className="amenities-header2">
-                <p>These amenities are available to you.</p>
+                <span>These amenities are available to you.</span>
             </div>
 
             <div className="amenities-photos">
 
                 <div className="photo-container">
                     <img src="https://a0.muscache.com/airbnb/static/select/pdp/amenities/tile-view-2x/parking.png"/> 
-                    <div className="photo-title">Free parking on premises</div>
+                    <div className="photo-title">
+                        <p>Free parking on premises</p>
+                    </div>
                 </div>
                 <div className="photo-container">
-                    <img src="./parking.png"/> 
-                    <div className="photo-title">Free parking on premises</div>
+                    <img src="https://a0.muscache.com/airbnb/static/select/pdp/amenities/tile-view-2x/kitchen.png"/> 
+                    <div className="photo-title">
+                        <p>Kitchen</p>
+                    </div>
                 </div>
                 <div className="photo-container">
-                    <img src="./coffee-maker.png" />
-                    <div className="photo-title">Free parking on premises</div>
+                    <img src="https://a0.muscache.com/airbnb/static/select/pdp/amenities/tile-view-2x/washer.png" />
+                    <div className="photo-title">
+                        <p>Washer</p>
+                    </div>
                 </div>
                 <div className="photo-container">
-                    <img src="./dryer.png" />
-                    <div className="photo-title">Free parking on premises</div>
+                    <img src="https://a0.muscache.com/airbnb/static/select/pdp/amenities/tile-view-2x/dryer.png" />
+                    <div className="photo-title">
+                        <p>Dryer</p>
+                    </div>
                 </div>
                 <div className="photo-container">
-                    <img src="./elevator.png" />
-                    <div className="photo-title">Free parking on premises</div>
+                    <img src="https://a0.muscache.com/airbnb/static/select/pdp/amenities/tile-view-2x/wireless-internet.png" />
+                    <div className="photo-title">
+                        <p>Wifi</p>
+                    </div>
                 </div>
                 <div className="photo-container">
-                    <img src="./essentials.png" /> 
-                    <div className="photo-title">Free parking on premises</div>
+                    <img src="https://a0.muscache.com/airbnb/static/select/pdp/amenities/tile-view-2x/tv.png" />
+                    <div className="photo-title">
+                        <p>TV</p>
+                    </div>
                 </div>
                 <div className="photo-container">
-                    <img src="./extra-pillows-blankets.png" /> 
-                    <div className="photo-title">Free parking on premises</div>
+                    <img src="https://a0.muscache.com/airbnb/static/select/pdp/amenities/tile-view-2x/essentials.png" /> 
+                    <div className="photo-title">
+                        <p>Bathroom essentials</p>
+                    </div>
                 </div>
                 <div className="photo-container">
-                    <img src="./hair-dryer.png" />
-                    <div className="photo-title">Free parking on premises</div>
+                    <img src="https://a0.muscache.com/airbnb/static/select/pdp/amenities/tile-view-2x/extra-pillows-blankets.png" /> 
+                    <div className="photo-title">
+                        <p>Bedroom comforts</p>
+                    </div>
                 </div>
                 <div className="photo-container">
-                    <img src="./iron.png" /> 
-                    <div className="photo-title">Free parking on premises</div>
+                    <img src="https://a0.muscache.com/airbnb/static/select/pdp/amenities/tile-view-2x/coffee-maker.png" />
+                    <div className="photo-title">
+                        <p>Coffee maker</p>
+                    </div>
                 </div>
                 <div className="photo-container">
-                    <img src="./kitchen.png" /> 
-                    <div className="photo-title">Free parking on premises</div>
+                    <img src="https://a0.muscache.com/airbnb/static/select/pdp/amenities/tile-view-2x/hair-dryer.png" /> 
+                    <div className="photo-title">
+                        <p>Hair dryer</p>
+                    </div>
                 </div>
                 <div className="photo-container">
-                    <img src="./tv.png" /> 
-                    <div className="photo-title">Free parking on premises</div>
+                    <img src="https://a0.muscache.com/airbnb/static/select/pdp/amenities/tile-view-2x/iron.png" /> 
+                    <div className="photo-title">
+                        <p>Iron</p>
+                    </div>
                 </div>
                 <div className="photo-container">
-                    <img src="./washer.png" /> 
-                    <div className="photo-title">Free parking on premises</div>
+                    <img src="https://a0.muscache.com/airbnb/static/select/pdp/amenities/tile-view-2x/elevator.png" /> 
+                    <div className="photo-title">
+                        <p>Elevator</p>
+                    </div>
                 </div>
-                <div className="photo-container">
-                    <img src="./wireless-internet.png" />  
-                    <div className="photo-title">Free parking on premises</div>
-                </div>
-                {/* <div><img src="./app/assets/images/amenities/parking.png"/> </div> */}
             </div>
             
         </div>
