@@ -11,7 +11,10 @@ const SpotAmenities = () => {
                 <span>These amenities are available to you.</span>
             </div>
 
-            <div className="amenities-photos">
+            <div className="amenitiess">
+                <img src="https://waterbnb-seed.s3-us-west-1.amazonaws.com/amenities.png"/>
+            </div>
+            {/* <div className="amenities-photos">
 
                 <div className="photo-container">
                     <img src="https://a0.muscache.com/airbnb/static/select/pdp/amenities/tile-view-2x/parking.png"/> 
@@ -85,7 +88,7 @@ const SpotAmenities = () => {
                         <p>Elevator</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
             
         </div>
     )

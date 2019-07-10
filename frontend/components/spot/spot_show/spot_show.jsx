@@ -7,6 +7,7 @@ import Location from './location';
 import NavBarIndexContainer from '../../search/navbar_index/navbar_index_container';
 import HostInfo from './host_info';
 import MiniHostInfo from './mini_host_info';
+import SpotAd from './spot_ad';
 
 
 class SpotShow extends React.Component{
@@ -55,7 +56,11 @@ class SpotShow extends React.Component{
                     </div>
 
                     <div>
-                        {/* <SpotAmenities/> */}
+                        <SpotAd/>
+                    </div>
+
+                    <div>
+                        <SpotAmenities/>
                     </div>
 
                     {/* <div>
