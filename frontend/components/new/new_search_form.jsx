@@ -7,28 +7,29 @@ import { withRouter } from 'react-router-dom';
 class NewSearchForm extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = { address: null }
-        this.state = { address: null, check_in: new Date(), check_out: new Date(), num_guest: null }
+
+        this.state = { 
+            address: null, 
+            check_in: new Date(), 
+            check_out: new Date(), 
+            guests: null }
         this.handleUpdate = this.handleUpdate.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange1 = this.handleChange1.bind(this);
-        this.handleChange2 = this.handleChange2.bind(this);
-        this.handleSelect = this.handleSelect.bind(this);
+        this.handleCheckIn = this.handleCheckIn.bind(this);
+        this.handleCheckOut = this.handleCheckOut.bind(this);
+        this.handleGuest = this.handleGuest.bind(this);
     }
 
-    handleSelect(event) {
+    handleGuest(event) {
         let value = Number(event.target.value);
-        // 
-        this.setState({ num_guest: value })
-        //  
+        this.setState({ guests: value })
     }
 
-    handleChange1(date) {
+    handleCheckIn(date) {
         this.setState({ check_in: date, check_out: date })
     }
 
-    handleChange2(date) {
-        //  
+    handleCheckOut(date) {
         this.setState({ check_out: date })
     }
 
@@ -60,64 +61,59 @@ class NewSearchForm extends React.Component {
             <option className="guests-list" value={num} placeholder="Guests" key={String(num)} >{num}</option>
         ))
         return (
-            <div className="splash-body">
-                <div className="splash-search-container">
-                    <div className="splash-search">
-                        <div className="splash-search-head">
-                            <div className="splash-head-text">
+            <div className="search-body">
+                <div className="search-search-container">
+                    <div className="search-search">
+                        <div className="search-search-head">
+                            <div className="search-head-text">
                                 Book unique places to stay and things to do.
-                </div>
+                            </div>
 
-                            <div className="splash-search-inputs">
+                            <div className="search-search-inputs">
 
-                                <div className="splash-input-container">
-                                    <p className="splash-input-label">WHERE</p>
-                                    <div className="splash-input-div">
-                                        {/* <input className="splash-input" type="text" placeholder="San Francisco, CA, United States" /> */}
-                                        <input id="address-input" onChange={this.handleUpdate} type="text" placeholder="Try &quot;San Francisco&quot;" className="splash-input" />
+                                <div className="search-input-container">
+                                    <p className="search-input-label">WHERE</p>
+                                    <div className="search-input-div">
+                                        <input id="address-input" onChange={this.handleUpdate} type="text" placeholder="Try &quot;San Francisco&quot;" className="search-input" />
                                     </div>
                                 </div>
 
 
-                                <div className="splash-input-container">
-                                    <div className="splash-dates">
+                                <div className="search-input-container">
+                                    <div className="search-dates">
 
-                                        <div className="splash-input-div-date">
-                                            <p className="splash-input-label">CHECK-IN</p>
-                                                {/* <input type="date" /> */}
+                                        <div className="search-input-div-date">
+                                            <p className="search-input-label">CHECK-IN</p>
                                             <DatePicker
                                                 selected={this.state.check_in}
-                                                onChange={this.handleChange1}
+                                                onChange={this.handleCheckIn}
                                                 placeholder="mm/dd/yyyy"
                                             />
-                                            {/* <input className="splash-input" type="text" placeholder="mm/dd/yyyy" /> */}
                                         </div>
 
-                                        <div className="splash-input-div-date">
-                                            <p className="splash-input-label">CHECK-OUT</p>
-                                                {/* <input type="date" /> */}
+                                        <div className="search-input-div-date">
+                                            <p className="search-input-label">CHECK-OUT</p>
                                             <DatePicker
                                                 selected={this.state.check_out}
-                                                onChange={this.handleChange2}
+                                                onChange={this.handleCheckOut}
                                             />
-                                            {/* <input className="splash-input" type="text" placeholder="mm/dd/yyyy" /> */}
                                         </div>
 
                                     </div>
                                 </div>
 
-                                <div className="splash-input-container">
-                                    <p className="splash-input-label">GUESTS</p>
-                                    <div className="splash-input-div">
+                                <div className="search-input-container">
+                                    <p className="search-input-label">GUESTS</p>
+                                    <div className="search-input-div">
 
-                                        <select className="splash-guests" placeholder="Guests">
+                                        <select className="search-guests" placeholder="Guests">
                                             {guests}
                                         </select>
                                     </div>
                                 </div>
 
-                                <div className="splash-submit-wrap">
-                                    <button onClick={this.handleSubmit} className="splash-submit">Search</button>
+                                <div className="search-submit-wrap">
+                                    <button onClick={this.handleSubmit} className="search-submit">Search</button>
                                 </div>
                             </div>
                         </div>

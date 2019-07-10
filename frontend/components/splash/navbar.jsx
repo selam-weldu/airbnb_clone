@@ -12,7 +12,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
     );
     const afterSession = () => (
         <nav className="login-signup">
-            <h2 className="welcome-name">Hi, {currentUser.username}!</h2>
+            <h2 className="welcome-name">Welcome, {currentUser.username}!</h2>
             <button onClick={logout}>Log Out</button>
         </nav>
     );

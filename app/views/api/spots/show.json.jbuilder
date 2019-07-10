@@ -7,7 +7,9 @@ json.spotType @spot.listing_type
 json.photoUrls @spot.photos.map { |photo| url_for(photo) }                     
 
 
-json.users do 
+
+
+json.users do
     json.set! @spot.host.id do
         json.extract! @spot.host, :id, :username, :fname, :bio
         json.photoUrl url_for(@spot.host.photo) if @spot.host.photo.attached?

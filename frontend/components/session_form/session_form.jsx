@@ -28,8 +28,8 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.processForm(this.state)
-            .then(this.props.closeModal);
-            // .then(this.props.errors.fill(""));
+            .then(this.props.closeModal)
+            .then(this.props.history.push(`/spots?lat=${lat}&lng=${lng}`))
     }
 
     handleDemoLogin() {
@@ -90,7 +90,7 @@ class SessionForm extends React.Component {
 
     usernameTyper() {
         let i = 0;
-        let username = ' sweldu'
+        let username = ' guestuser'
         const speed = 75; /* The speed/duration of the effect in milliseconds */
         let username_field = document.getElementById("username");
         username_field.value = "";
@@ -105,7 +105,7 @@ class SessionForm extends React.Component {
 
         typeWriter();
         setTimeout(this.passwordTyper, 1000);
-        setTimeout(this.handleDemoLogin, 1900);
+        setTimeout(this.handleDemoLogin, 2100);
     };
 
     passwordTyper() {

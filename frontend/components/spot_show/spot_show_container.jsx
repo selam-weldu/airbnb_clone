@@ -4,11 +4,12 @@ import { fetchSpot } from '../../actions/spot_actions';
 
 const msp = (state, ownProps) => {
     const spot = state.entities.spots[ownProps.match.params.spotId];
-    const host = spot ? state.entities.users[spot.id]: {}
-    
-    return(
-        { spot: spot, host: host}
-    )
+    const host = spot ? state.entities.users[spot.hostId] : {};
+
+    return {
+        spot: spot,
+        host: host
+    }
 
 };
 
@@ -20,3 +21,4 @@ export default connect(
     msp,
     mdp
 )(SpotShow);
+

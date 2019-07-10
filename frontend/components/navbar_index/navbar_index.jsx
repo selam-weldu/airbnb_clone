@@ -7,12 +7,12 @@ import SearchBar from '../search/autocomplete';
 class NavBarIndex extends React.Component {
     constructor(props) {
         super(props);
-        this.handleClick = this.handleClick.bind(this);
+        // this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick() {
-        this.props.history.push('/bookings')
-    }
+    // handleClick() {
+    //     this.props.history.push('/bookings')
+    // }
 
     render() {
         let { openModal, updateFilter, filters } = this.props;
