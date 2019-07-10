@@ -5,7 +5,8 @@ import SpotDetail from './spot_detail';import SpotPhotos from './spot_photos';
 import SpotAmenities from './spot_amenities';
 import Location from './location';
 import NavBarIndexContainer from '../navbar_index/navbar_index_container';
-// import HostInfo from './host_info';
+import HostInfo from './host_info';
+import MiniHostInfo from './mini_host_info';
 
 
 class SpotShow extends React.Component{
@@ -41,6 +42,10 @@ class SpotShow extends React.Component{
                 </div>
 
                 <div>
+                    <MiniHostInfo/>
+                </div>
+
+                <div>
                     <SpotPhotos
                         photoUrls={this.props.spot.photoUrls}/>
                 </div>
@@ -49,9 +54,10 @@ class SpotShow extends React.Component{
                     <SpotAmenities/>
                 </div>
 
-                {/* <div>
-                    <HostInfo/>
-                </div> */}
+                <div>
+                    <HostInfo
+                        host={this.props.host}/>
+                </div>
 
                 <div>
                     <Location
