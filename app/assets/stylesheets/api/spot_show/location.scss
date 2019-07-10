@@ -1,17 +1,54 @@
 .location-container{
-     margin-top: 2000px ;
-    margin-bottom: 72px ;
+    margin-top: 50px;
+    margin-bottom: 72px;
     display: block;
 }
 
 .location {
-
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: normal;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    color: rgb(72, 72, 72);
+    font-weight: 800;
+    margin-top: 67px;
 }
 
 .address{
+        overflow-wrap: break-word;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375em;
+    color: rgb(118, 118, 118);
+    margin: 0px;
 
 }
 
 .show-map{
+    width:1600px;
+    height:480px;
+    overflow: hidden;
+}
+
+.thin-line-location{
+    margin: -.5vw auto .5vw auto;
+    height: .25px;
+    min-width: 70%;
+    border: .5px solid #d2d2d2a1;
+    margin-bottom: 20px;
+}
+
+.loca_detail{
+    width: 41.6667%;
+    overflow-wrap: break-word;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75em;
+    color: rgb(72, 72, 72);
+    margin: 0px;
+        margin-top: 45px;
+    margin-bottom: 45px;
 
 }
