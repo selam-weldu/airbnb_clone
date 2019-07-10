@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import SearchForm from '../search/search_form';
 import Footer from './footer';
 import SearchFormContainer from '../search/search_form_container';
-import NewSearchFormContainer from '../new/new_search_form_container';
+import NewSearchFormContainer from '../splash/new/new_search_form_container';
 
 
 const Splash = (props) => {

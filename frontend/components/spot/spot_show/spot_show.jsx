@@ -1,10 +1,10 @@
 import React from 'react';
-import SpotMapContainer from '../spot/spot_map_container';
+import SpotMapContainer from '../spot_map_container';
 import ShowSplash from './show_splash';
 import SpotDetail from './spot_detail';import SpotPhotos from './spot_photos';
 import SpotAmenities from './spot_amenities';
 import Location from './location';
-import NavBarIndexContainer from '../navbar_index/navbar_index_container';
+import NavBarIndexContainer from '../../search/navbar_index/navbar_index_container';
 import HostInfo from './host_info';
 import MiniHostInfo from './mini_host_info';
 

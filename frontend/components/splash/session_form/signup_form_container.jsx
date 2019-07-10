@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { signup, clearErrors } from '../../actions/session_actions';
-import { openModal, closeModal } from '../../actions/modal_actions';
+import { signup, clearErrors } from '../../../actions/session_actions';
+import { openModal, closeModal } from '../../../actions/modal_actions';
 
 import SessionForm from './session_form';
 

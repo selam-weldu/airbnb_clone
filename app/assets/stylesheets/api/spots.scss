@@ -186,10 +186,16 @@ p:nth-child(2) {
 
 
  .spots-container{
-    margin-right: 0;
+    // margin-right: 0;
+    // margin-right: 0;
+    // position: absolute;
+    // top: 100px;
+
     margin-right: 0;
     position: absolute;
     top: 100px;
+    display: flex;
+    justify-content: space-between;
  }
 
  .spots-ul {

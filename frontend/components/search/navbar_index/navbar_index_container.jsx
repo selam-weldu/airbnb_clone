@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
-import { openModal } from '../../actions/modal_actions';
+import { logout } from '../../../actions/session_actions';
+import { openModal } from '../../../actions/modal_actions';
 import NavBarIndex from './navbar_index';
-import { updateFilter } from '../../actions/filter_actions';
+import { updateFilter } from '../../../actions/filter_actions';
 
 const msp = (state, ownProps) => {
     return {

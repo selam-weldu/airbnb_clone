@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchBarContainer from '../search/search_bar_container';
+import SearchBarContainer from '../search_bar_container';
 import { withRouter } from 'react-router-dom';
-import SearchBar from '../search/autocomplete';
+// import SearchBar from '../search/autocomplete';
 
 class NavBarIndex extends React.Component {
     constructor(props) {

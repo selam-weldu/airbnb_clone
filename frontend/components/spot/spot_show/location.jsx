@@ -1,5 +1,5 @@
 import React from 'react';
-import SpotMapContainer from '../spot/spot_map_container'
+import SpotMapContainer from '../spot_map_container'
 
 const Location = () => {
     return (

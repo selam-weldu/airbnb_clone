@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 // import ListingMap from './listing_map';
-import { fetchSpots } from '../../actions/spot_actions';
-import { updateFilter } from '../../actions/filter_actions';
+import { fetchSpots } from '../../../actions/spot_actions';
+import { updateFilter } from '../../../actions/filter_actions';
 import NewSearchForm from '../new/new_search_form';
-import { receiveSearch } from '../../actions/search_actions';
+import { receiveSearch } from '../../../actions/search_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
