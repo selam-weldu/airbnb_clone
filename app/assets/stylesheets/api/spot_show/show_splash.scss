@@ -1,23 +1,38 @@
-//////////Spot Show////////////////////
 
 .show-splash-container{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    
+
+        position: absolute;
+    width: 1851px;
+    height: 691px;
     background-size: cover;
-    background-color: rgb(242, 242, 242);
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 84px;
 }
 
 .title-logo-container{
-    width: 100%;
+        width: 600px;
     height: 100%;
     position: absolute;
     padding: 40px;
+    background-color: #f2f2f2;
+    display: inline-block;
+    // margin-top: 44px;
+        left: 25px;
 }
 
 .plus-logo{
+        width: 94.41px;
+    height: 60px;
+
+}
+
+.pluss {
+    width: 100%;
+    height: 100%;
 
 }
 
@@ -31,13 +46,34 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+
+        color: #484848;
+  
+    -webkit-font-smoothing: antialiased;
+        margin-top: 24px;
 }
 
 .main-photo-container{
-    top: 0px;
-    width: 100%;
+   
+
+    //     width: 1200px;
+    // height: 100%;
+    // position: absolute;
+    // padding: 40px;
+    // margin-top: -41px;
+    // top: 0;
+    // right: 73px;
+
+
+    width: 1249px;
     height: 100%;
     position: absolute;
+    padding: 40px;
+    /* margin-left: 40px; */
+    margin-top: -41px;
+    top: 0;
+    right: 1px;
 }
 
 .photo{
@@ -46,7 +82,7 @@
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-color: rgb(242, 242, 242);
+    // background-color: rgb(242, 242, 242);
     background-position: 50% 50%;
     background-repeat: no-repeat;
 

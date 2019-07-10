@@ -25,7 +25,7 @@ class SpotShow extends React.Component{
 
         const spot = this.props.spot;
         return(
-            <div>
+            <div className="spot-show-main">
 
                 <div>
                     <NavBarIndexContainer/>
@@ -38,34 +38,34 @@ class SpotShow extends React.Component{
 
                 <div className="show-bottom">
 
-                    <div>
+                    {/* <div>
                         <SpotDetail
                             spot={this.props.spot}/>
-                    </div>
+                    </div> */}
 
-                    <div>
+                    {/* <div>
                         <MiniHostInfo/>
-                    </div>
+                    </div> */}
 
-                    <div>
+                    {/* <div>
                         <SpotPhotos
                             photoUrls={this.props.spot.photoUrls}/>
-                    </div>
+                    </div> */}
 
                     <div>
-                        <SpotAmenities/>
+                        {/* <SpotAmenities/> */}
                     </div>
 
-                    <div>
+                    {/* <div>
                         <HostInfo
                             host={this.props.host}/>
-                    </div>
+                    </div> */}
 
-                    <div>
+                    {/* <div>
                         <Location
                             location={this.props.spot.location}
                             loc_detail={this.props.spot.loc_detail}/>
-                    </div>
+                    </div> */}
                 </div>
 
             </div>
