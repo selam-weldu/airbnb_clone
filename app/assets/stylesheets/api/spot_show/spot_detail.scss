@@ -1,0 +1,29 @@
+.spot-detail-container{
+    width: 50%;
+    padding-left: 8px;
+    padding-right: 8px;
+    min-height: 1px;
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+
+}
+
+.spot-details{
+        font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    -webkit-font-smoothing: antialiased;
+}
+
+.spot-description{
+
+    overflow-wrap: break-word;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75em;
+    color: rgb(72, 72, 72);
+}
+

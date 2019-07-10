@@ -9,7 +9,12 @@ import SpotMapContainer from '../spot/spot_map_container';
 class Search extends React.Component {
     constructor(props){
         super(props);
+        // this.render = this.render.bind(this);
     }
+
+    // componentDidMount(){
+    //     this.props.fetchSpots();
+    // }
 
     render(){
         return(

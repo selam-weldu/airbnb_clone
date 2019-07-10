@@ -1,0 +1,55 @@
+//////////Spot Show////////////////////
+
+.show-splash-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: rgb(242, 242, 242);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.title-logo-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 40px;
+}
+
+.plus-logo{
+
+}
+
+.title{
+    font-size: 46px;
+    line-height: 52px;
+    max-height: 312px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+.main-photo-container{
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.photo{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: rgb(242, 242, 242);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+}
+
+

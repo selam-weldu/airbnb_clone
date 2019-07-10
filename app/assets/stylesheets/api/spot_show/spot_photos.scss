@@ -1,0 +1,27 @@
+.show-photos-container{
+    width: 1600px;
+    height:736px;
+}
+
+.photos-header{
+    font-size: 36px ;
+    line-height: 40px ;
+    letter-spacing: normal;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    color: rgb(72, 72, 72);
+    font-weight: 800;
+}
+
+.spot-photos{
+    width:1600px;
+    height: 602px;
+}
+
+.photos{
+    width: 25% ;
+    padding-left: 8px ;
+    padding-right: 8px ;
+    padding-bottom: 16px ;
+    display: inline-block ;
+    vertical-align: top ;
+}

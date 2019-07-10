@@ -15,7 +15,7 @@ class SpotMap extends React.Component {
     componentDidUpdate(prevProps) {
         this.MarkerManager.updateMarkers(this.props.spots);
         if (prevProps.location.search != this.props.location.search){
-            debugger
+            // debugger
             this.renderMap()
         }
     }
