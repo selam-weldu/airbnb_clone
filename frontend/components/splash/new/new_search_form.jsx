@@ -87,7 +87,7 @@ class NewSearchForm extends React.Component {
                                             <DatePicker
                                                 selected={this.state.check_in}
                                                 onChange={this.handleCheckIn}
-                                                placeholder="mm/dd/yyyy"
+                                                // placeholder="mm/dd/yyyy"
                                             />
                                         </div>
 

@@ -37,6 +37,10 @@ class Spot < ApplicationRecord
         foreign_key: :host_id,
         class_name: :User 
 
+    has_many :bookings,
+        foreign_key: :spot_id,
+        class_name: :Booking
+
 
     def self.in_bounds(bounds)
     bounds = JSON.parse(bounds)

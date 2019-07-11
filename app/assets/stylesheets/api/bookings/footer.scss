@@ -1,0 +1,37 @@
+.show-footer{
+
+    background-color: #ffffff;
+    padding-top: 16px;
+    padding-bottom: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: -24px;
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.14);
+}
+
+.booking-button-container{
+    
+    position: relative;
+        height: 48px;
+    min-width: 174px;
+}
+
+.booking-button {
+    
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+        font-size: var(--font-button-font-size, 16px);
+    line-height: var(--font-button-line-height, 24px);
+    letter-spacing: var(--font-button-letter-spacing, normal);
+    font-family: var(--font-button-font-family, Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif);
+    text-transform: var(--font-button-text-transform, undefined);
+    padding-top: var(--spacing-button-vertical, 10px);
+    padding-bottom: var(--spacing-button-vertical, 10px);
+    font-weight: var(--font-bold-font-weight, 800);
+    padding-right: var(--unit, 8px);
+    padding-left: var(--unit, 8px);
+    box-shadow: var(--shadow-button-level0-box-shadow, none);
+    color: #ffffff;
+
+}

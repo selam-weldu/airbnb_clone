@@ -8,6 +8,8 @@ import NavBarIndexContainer from '../../search/navbar_index/navbar_index_contain
 import HostInfo from './host_info';
 import MiniHostInfo from './mini_host_info';
 import SpotAd from './spot_ad';
+import BookingFormContainer from '../../booking/booking_form_container';
+import BookingFooterContainer from '../../booking/booking_footer_container';
 
 
 class SpotShow extends React.Component{
@@ -45,6 +47,10 @@ class SpotShow extends React.Component{
                         </div>
 
                         {/* <div>
+                            <BookingFormContainer/>
+                        </div> */}
+
+                        {/* <div>
                             <MiniHostInfo
                                 host={this.props.host}/>
                         </div> */}
@@ -72,6 +78,12 @@ class SpotShow extends React.Component{
                         <Location
                             location={this.props.spot.location}
                             loc_detail={this.props.spot.loc_detail}/>
+                    </div>
+
+                    <div classname="show-footer">
+                        <div className="booking-button-container">
+                            <BookingFooterContainer/>
+                        </div>
                     </div>
                 </div>
 
