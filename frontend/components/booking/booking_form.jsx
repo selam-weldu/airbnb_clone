@@ -8,12 +8,11 @@ class BookingForm extends React.Component {
         super(props);
 
         this.state = {
-            address: null,
+            spot_id: this.props.spot.id,
             check_in: new Date(),
             check_out: new Date(),
-            guests: null
+            num_guest: 1
         }
-        this.handleUpdate = this.handleUpdate.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleCheckIn = this.handleCheckIn.bind(this);
         this.handleCheckOut = this.handleCheckOut.bind(this);
@@ -22,31 +21,30 @@ class BookingForm extends React.Component {
 
     handleGuest(event) {
         let value = Number(event.target.value);
-        this.setState({ guests: value })
+        this.setState({ num_guest: value })
     }
 
     handleCheckIn(date) {
-        this.setState({ check_in: date, check_out: date })
+        this.setState({ check_in: date })
+        // this.setState({ check_in: date, check_out: date })
     }
 
     handleCheckOut(date) {
         this.setState({ check_out: date })
     }
 
-    handleUpdate(e) {
-        this.setState({ address: e.target.value })
-    }
-
     handleSubmit(e) {
+        // debugger
         e.preventDefault();
-        this.props.processForm(this.state)
-            .then(this.props.closeModal)
-            .then(this.props.history.push('/'))
+        const booking = Object.assign({},this.state);
+        this.props.processForm(booking)
+            .then(this.props.history.push('/booking'))
+            // .then(this.props.closeModal)
     }
 
     render() {
-        const guests = ['1 guest', '2 guest', '3 guest', '4 guest'].map(num => (
-            <option className="guests-list" value={num} placeholder="Guests" key={String(num)} >{num}</option>
+        const guests = [1,2,3,4].map(num => (
+            <option className="guests-list" value={num} key={String(num)} >{num}</option>
         ))
         return (
             <div className="booking-search-body">
@@ -93,7 +91,8 @@ class BookingForm extends React.Component {
                                 </div>
 
                                 <div className="booking-submit-wrap">
-                                    <button onClick={this.handleSubmit} className="booking-submit">Book</button>
+                                    <button onClick={this.handleSubmit} className="footer-button">Book</button>
+                                    {/* <button onClick={this.handleSubmit} className="booking-submit">Book</button> */}
                                 </div>
                             </div>
                         </div>

@@ -8,8 +8,10 @@ import NavBarIndexContainer from '../../search/navbar_index/navbar_index_contain
 import HostInfo from './host_info';
 import MiniHostInfo from './mini_host_info';
 import SpotAd from './spot_ad';
+import BookingForm from '../../booking/booking_form';
 import BookingFormContainer from '../../booking/booking_form_container';
 import BookingFooterContainer from '../../booking/booking_footer_container';
+// import BookingFooter from '../../booking/booking_footer';
 
 
 class SpotShow extends React.Component{
@@ -19,12 +21,15 @@ class SpotShow extends React.Component{
 
 
     componentDidMount() {
+        // debugger
         this.props.fetchSpot(this.props.match.params.spotId);
     }
 
     render() {
 
         if(!this.props.spot) return null;
+
+        // debugger
 
         const spot = this.props.spot;
         return(
@@ -46,9 +51,11 @@ class SpotShow extends React.Component{
                                 spot={this.props.spot}/>
                         </div>
 
-                        {/* <div>
-                            <BookingFormContainer/>
-                        </div> */}
+                        <div>
+                            <BookingFormContainer
+                                spot={this.props.spot}
+                                />
+                        </div>
 
                         {/* <div>
                             <MiniHostInfo
@@ -80,7 +87,7 @@ class SpotShow extends React.Component{
                             loc_detail={this.props.spot.loc_detail}/>
                     </div>
 
-                    <div classname="show-footer">
+                    <div className="show-footer">
                         <div className="booking-button-container">
                             <BookingFooterContainer/>
                         </div>

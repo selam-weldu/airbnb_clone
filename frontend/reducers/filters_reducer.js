@@ -17,7 +17,7 @@ const filterReducer = (state = defaultFilters, action) => {
             const newFilter = {
                 [action.filter]: action.value
             };
-            return merge({}, newState, newFilter);
+            return merge({}, state, newFilter);
         default:
             return state;
     }

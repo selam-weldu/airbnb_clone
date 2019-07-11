@@ -14,15 +14,18 @@ class SpotMap extends React.Component {
 
     componentDidUpdate(prevProps) {
         this.MarkerManager.updateMarkers(this.props.spots);
-        if (prevProps.location.search != this.props.location.search){
+        if (prevProps.location.search !== this.props.location.search){
             // debugger
             this.renderMap()
         }
     }
 
     registerListeners() {
+        // debugger
         google.maps.event.addListener(this.map, 'idle', () => {
             const { north, south, east, west } = this.map.getBounds().toJSON();
+
+            // debugger
 
             let bounds = {
                 northEast: { lat: north, lng: east },
@@ -35,9 +38,11 @@ class SpotMap extends React.Component {
 
     renderMap(){
 
+        // debugger
+
         let newLat, newLng;
 
-        if (this.props.search) {
+        if (!this.props.search) {
             // debugger
             newLat = this.props.search.lat;
             newLng = this.props.search.lng
@@ -45,6 +50,7 @@ class SpotMap extends React.Component {
             newLat = 37.7758;
             newLng = -122.435;
         }
+        // debugger
 
         const mapOptions = {
             center: {
@@ -57,7 +63,7 @@ class SpotMap extends React.Component {
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         this.MarkerManager = new MarkerManager(this.map);
-
+        // debugger
         this.registerListeners();
         this.MarkerManager.updateMarkers(this.props.spots);
 

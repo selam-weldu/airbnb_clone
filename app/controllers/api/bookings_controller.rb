@@ -12,11 +12,11 @@ class Api::BookingsController < ApplicationController
     def create
         @booking = Booking.new(booking_params)
         @booking.guest_id = current_user.id
-        spot = Spot.find(params[:booking][:spot_id])
+        # spot = Spot.find(params[:booking][:spot_id])
 
         if @booking.save
-            @bookings = current_user.bookings 
-            render :index
+            # @bookings = current_user.bookings 
+            # render :index
             render "api/bookings/show"
         else
             render json: @booking.errors.full_messages, status: 422
