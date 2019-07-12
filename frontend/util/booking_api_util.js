@@ -1,5 +1,4 @@
 export const fetchBookings = () => {
-    // debugger
     return $.ajax({
         method: "GET",
         url: `/api/bookings`

@@ -5,7 +5,6 @@ import { openModal } from '../../actions/modal_actions';
 import BookingFooter from './booking_footer';
 
 const msp = (state,ownProps) => {
-    debugger
     return({
         currentUser: state.entities.users[state.session.currentUserId],
         // spot: Object.values(state.entities.spots)[0]

@@ -19,14 +19,14 @@ class SearchBar extends React.Component {
     }
 
     handleKeyDown(e) {
-        // debugger
+     
         if(e.key === 'Enter'){
             e.preventDefault();
             let coords = new google.maps.Geocoder();
             coords.geocode({ "address": this.state.address }, (results, status) => {
                 let lat, lng;
                 if (status === 'OK') {
-                    // debugger
+                   
                     lat = results[0].geometry.location.lat()
                     lng = results[0].geometry.location.lng()
                     this.props.receiveSearch({ lat, lng });

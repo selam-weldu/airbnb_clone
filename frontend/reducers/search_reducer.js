@@ -5,7 +5,6 @@ const searchReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_SEARCH:
-            // debugger
             return merge({}, state, action.search);
         default:
             return state;

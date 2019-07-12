@@ -21,15 +21,13 @@ class SpotShow extends React.Component{
 
 
     componentDidMount() {
-        // debugger
+     
         this.props.fetchSpot(this.props.match.params.spotId);
     }
 
     render() {
 
         if(!this.props.spot) return null;
-
-        // debugger
 
         const spot = this.props.spot;
         return(
