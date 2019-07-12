@@ -5,7 +5,6 @@ import BookingForm from './booking_form';
 import { withRouter } from 'react-router-dom';
 
 const msp = (state,ownProps) => {
-    // debugger
     return ({
         bookings: state.entities.bookings,
         // spot: state.entities.spots[ownProps.match.params.spotId],

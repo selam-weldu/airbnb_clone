@@ -17,7 +17,6 @@ const receiveSpot = payload => ({
 
 
 export const fetchSpots = (filters) => dispatch => {
-    // debugger
     return(
         SpotAPIUtil.fetchSpots(filters)
             .then(spots => (dispatch(receiveSpots(spots))

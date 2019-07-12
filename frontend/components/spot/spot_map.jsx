@@ -50,6 +50,15 @@ class SpotMap extends React.Component {
             newLat = 37.7758;
             newLng = -122.435;
         }
+
+        // if (this.props.search === {}) {
+        //     // debugger
+        //     newLat = 37.7758;
+        //     newLng = -122.435;
+        // } else {
+        //     newLat = this.props.search.lat;
+        //     newLng = this.props.search.lng
+        // }
         // debugger
 
         const mapOptions = {

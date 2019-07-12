@@ -16,9 +16,11 @@
 }
 
 .spot-host{
+
     width: 1616px;
     height: 120px;
     display: block;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
+    position: relative;
 }

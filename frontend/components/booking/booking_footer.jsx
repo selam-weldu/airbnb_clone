@@ -5,7 +5,6 @@ class BookingFooter extends React.Component {
     render(){
 
         let { openModal } = this.props
-        // debugger
         return(
             <div className="booking-footer-submit">
                 <div className="footer-left">
@@ -23,9 +22,11 @@ class BookingFooter extends React.Component {
         )
     }
 }
+
+export default BookingFooter;
+
 // const BookingFooter = ( {openModal} ) => {
 //     // const price = props.spot.price
-//     debugger
 //     return (
 //         <div className="booking-footer-submit">
 //             <div className="footer-left">
@@ -43,5 +44,4 @@ class BookingFooter extends React.Component {
 //     );
 // };
 
-export default BookingFooter;
 

@@ -31,3 +31,24 @@ class Api::SpotsController < ApplicationController
   end
 
 end
+
+
+# class Api::SpotsController < ApplicationController
+
+#     def index
+#         # @spots = Spot.in_bounds(params[:bounds])
+#         @spots = Spot.all
+#         render 'api/spots/index'
+#     end
+
+#     def show
+#         @spot = Spot.find(params[:id])
+#         render 'api/spots/show'
+#     end
+
+#     private
+#     def spot_params
+#         params.require(:listing).permit(:title, :description, :num_guests, :listing_type, :num_beds, :num_baths, :price,:location, :loc_detail, :lat, :lng, :host_id, photos: [])
+#     end
+
+# end

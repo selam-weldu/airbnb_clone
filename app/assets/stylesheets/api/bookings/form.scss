@@ -34,8 +34,12 @@ input:focus {
 }
 
 .booking-search-body {
-  position: relative;
-  height: 700px;
+
+
+      position: absolute;
+    height: 500px;
+    top: -124px;
+    right: 400px;
 
 }
 

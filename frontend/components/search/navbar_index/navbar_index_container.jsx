@@ -7,7 +7,8 @@ import { updateFilter } from '../../../actions/filter_actions';
 const msp = (state, ownProps) => {
     return {
         user: state.entities.users[state.session.id],
-        currentUser: state.entities.users[state.session.id],
+        // currentUser: state.entities.users[state.session.id],
+        currentUser: state.entities.users[state.session.currentUserId],
         filters: state.ui.filters,
         spots: Object.values(state.entities.spots)
     }

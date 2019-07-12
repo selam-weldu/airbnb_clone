@@ -10,10 +10,11 @@ const receiveBookings = bookings => ({
     bookings
 });
 
-const receiveBooking = booking => ({
+const receiveBooking = payload => ({
     type: RECEIVE_BOOKING,
-    booking
+    payload
 });
+
 
 const removeBooking = (booking) => ({
     type: REMOVE_BOOKING,
@@ -40,6 +41,8 @@ export const createBooking = (booking) => dispatch => (
     BookingAPIUtil.createBooking(booking)
         .then((booking) => dispatch(receiveBooking(booking)))
 )
+
+
 export const updateBooking = (booking) => dispatch => (
     BookingAPIUtil.updateBooking(booking)
         .then((booking) => dispatch(receiveBooking(booking)))

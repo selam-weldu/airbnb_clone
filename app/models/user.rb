@@ -27,6 +27,14 @@ class User < ApplicationRecord
   has_many :spots,
     foreign_key: :host_id,
     class_name: :Spot
+
+  has_many :bookings,
+        foreign_key: :guest_id,
+        class_name: :Booking  
+
+  has_many :booked_spots,
+      through: :bookings,
+      source: :spot      
     
 
   def self.find_by_credentials(username, password)

@@ -3,24 +3,25 @@ import {
     RECEIVE_SPOTS,
     RECEIVE_SPOT
 } from '../actions/spot_actions';
+import { RECEIVE_USER } from '../actions/user_actions';
 
 const spotsReducer = (state = {}, action) => {
     Object.freeze(state);
 
-    let nextState = merge({},state)
-
-    // debugger
     switch (action.type) {
         case RECEIVE_SPOTS:
-            return action.spots;
+            return merge({}, state, action.spots);
 
         case RECEIVE_SPOT:
-            // debugger
-            nextState[action.payload.id] = action.payload;
-            return nextState;
+            return merge({}, state, action.payload.spots);
+
+        case RECEIVE_USER:
+            return merge({},state, action.payload.spots);
+                
         default:
             return state;
     } 
 };
 
 export default spotsReducer;
+

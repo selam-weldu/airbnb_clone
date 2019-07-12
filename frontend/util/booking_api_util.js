@@ -35,3 +35,4 @@ export const deleteBooking = id => (
         url: `api/bookings/${id}`
     })
 );
+

@@ -7,7 +7,6 @@ class Api::UsersController < ApplicationController
   end
   
    def show
-    # debugger
     @user = User.with_attached_photo.find(params[:id])
     render "api/users/show"
   end
@@ -29,4 +28,5 @@ class Api::UsersController < ApplicationController
     params.require(:user).permit(:username, :password, :fname, :bio, :photoUrl)
   end
 end
+
 

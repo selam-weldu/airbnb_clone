@@ -1,0 +1,51 @@
+.booking-user{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 3vw 0;
+    color: #444;
+}
+
+
+.profile-pic{
+    border-radius: 50%;
+    margin: 0 4vw 0 12vw;
+    width: 10vw;
+    height: 10vw;
+    background-size: cover;
+    -webkit-box-shadow: 1px 2px 6px 0px #24202057;
+    -moz-box-shadow: 1px 2px 6px 0px #24202057;
+    box-shadow: 1px 2px 6px 0px #24202057;
+}
+
+.bookings-ul{
+    border: 1px solid black;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.booking-index-item{
+    height: 400px;
+    width: 400px;
+}
+
+.welcome-guest{
+    width: 100%;
+    margin: .4vw 0 .4vw 0;
+    height: auto;
+    font-size: 2.5em;
+
+        margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.user-show{
+        max-width: 85vw;
+    margin: 6vw auto 0 auto;
+}

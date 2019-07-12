@@ -1,11 +1,12 @@
 .spot-detail-container{
+
     width: 50%;
     padding-left: 8px;
     padding-right: 8px;
     min-height: 1px;
-    // position: relative;
     box-sizing: border-box;
-    display: block;
+    /* display: block; */
+    overflow: hidden;
 
 }
 
