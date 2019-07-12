@@ -17,9 +17,10 @@ The project was planned and carried out within 10-days. Additional features and 
  * Browse multiple spots through GoogleMaps
  * Book available spots and view your bookings on the user show page
  
- #Search 
+ # Search 
+ 
  <p align="center">
- <img width="600" height="375" src="https://github.com/welduselam/waterbnb/blob/master/app/assets/images/ezgif.com-video-to-gif.gif">
+ <img width="600" height="375" src="https://github.com/welduselam/waterbnb/blob/master/app/assets/images/Booking.gif">
 </p>
  
  
