@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchUser } from '../../actions/user_actions';
 import UserShow from './user_show';
-// import { removeBooking } from '../../actions/booking_actions';
+import { deleteBooking } from '../../actions/booking_actions';
 
 const msp = (state) => {
     const userId = state.session.currentUserId;
@@ -19,7 +19,7 @@ const msp = (state) => {
 
 const mdp = dispatch => ({
     fetchUser: (id) => dispatch(fetchUser(id)),
-    // removeBooking: (id) => dispatch(removeBooking(id))
+    deleteBooking: (id) => dispatch(deleteBooking(id))
 });
 
 export default connect(msp,mdp)(UserShow);

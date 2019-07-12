@@ -32,7 +32,7 @@ class UserShow extends React.Component {
                     key={booking.id}
                     booking={booking}
                     spot={spot} 
-                    removeBooking={this.props.removeBooking}
+                    deleteBooking={this.props.deleteBooking}
                     fetchUser={this.props.fetchUser}
                     userId={this.props.userId}/>
             )

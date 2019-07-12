@@ -116,7 +116,7 @@
 .booking-footer-info {
     display: flex;
     justify-content: space-between;
-    margin-top: 75px;
+        margin-top: 40px;
     // position: absolute;
     // right: 10px;
 }
@@ -191,4 +191,29 @@
 .heart {
     position: absolute;
     right: 10px;
+}
+
+.booking-delete{
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 800;
+    min-width: 71.1935px;
+    padding-right: 8px;
+    padding-left: 8px;
+    box-shadow: none;
+    color: white;
+    margin: 0px;
+    text-decoration: none;
+    border-radius: 4px;
+    border-width: 2px;
+    border-style: solid;
+    background: #914669;
+    border-color: transparent;
 }
