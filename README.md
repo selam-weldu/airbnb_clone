@@ -1,24 +1,29 @@
-# README
+# Waterbnb
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Waterbnb, an Airbnb clone, is a single page application that allows users to book spots filtered by location. 
 
-Things you may want to cover:
+The project was planned and carried out within 10-days. Additional features and optimizations will continue to be added.
 
-* Ruby version
 
-* System dependencies
+# Technologies
+ * Ruby on Rails backend
+ * PostgreSQL database
+ * React/Redux frontend
+ * Active Storage with Amazon S3
+ * Google maps API
+ 
+# Features
+ * Secure signup and login with full user authentication using BCrypt
+ * Browse multiple spots through GoogleMaps
+ * Book available spots and view your bookings on the user show page
+ 
+ #Search 
+ <p align="center">
+ <img width="600" height="375" src="https://github.com/welduselam/waterbnb/blob/master/app/assets/images/ezgif.com-video-to-gif.gif">
+</p>
+ 
+ 
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
