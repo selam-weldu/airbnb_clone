@@ -13,8 +13,11 @@ The project was planned and carried out within 10-days. Additional features and 
  * Google maps API
  
 # Features
- * Secure signup and login
- * 
+ * Secure signup and login with full user authentication using BCrypt
+ * Browse multiple spots through GoogleMaps
+ * Book available spots and view your bookings on the user show page
+ 
+ 
 
 
 
