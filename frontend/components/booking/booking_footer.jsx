@@ -13,9 +13,9 @@ class BookingFooter extends React.Component {
                 <div className="footer-right">
                     <div className="footer-price-container">
                         {/* <span>${price}/night</span> */}
-                        <span>$150/night</span>
+                        <span>${this.props.spot.price}/night</span>
                     </div>
-                    <button className="footer-button" onClick={() => openModal('booking')}>Check availability</button>
+                    {/* <button className="footer-button" onClick={() => openModal('booking')}>Check availability</button> */}
                     {/* <button className="footer-button" onClick={props.openModal('booking')}>Check availability</button> */}
                 </div>
             </div>

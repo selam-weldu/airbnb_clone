@@ -34,13 +34,10 @@ input:focus {
 }
 
 .booking-search-body {
-
-
       position: absolute;
     height: 500px;
     top: -124px;
-    right: 400px;
-
+    right: 700px;
 }
 
 
@@ -68,29 +65,23 @@ input:focus {
 }
 
 .booking-head-text {
-  // color: rgb(75, 73, 73);
-  // font-weight: bold;
-  // outline: none;
-  // font-size: 35px;
-  // font-family: Roboto, "Helvetica Neue", sans-serif;
 
-    color: #4b4949;
+        color: #4b4949;
     font-weight: bold;
     outline: none;
-    font-size: 35px;
+    font-size: 27px;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    font-weight: inherit;
+    font-weight: 150;
     line-height: inherit;
     margin: 0px;
     padding: 0px;
 }
 
 .booking-search-inputs {
-  height: 330px;
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+      height: 330px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
   /* overflow: scroll; */
 }
 
@@ -288,4 +279,24 @@ border-color: transparent;
     border-color: rgb(235, 235, 235) !important;
     border-image: initial !important;
     border-radius: 3px !important;
+}
+
+.closee-x{
+      margin-left: 5px;
+    margin-top: -15px;
+    margin-right: 425px;
+    padding-top: -3px;
+    padding-left: inherit;
+    min-width: 30px;
+    font-size: xx-large;
+    align-items: flex-start;
+    display: block;
+    justify-content: flex-start;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 5rem;
+    background-color: #ffffff00;
+    color: #8d8d8d;
+    transition: all .5s ease;
+    margin-bottom: 20px;
 }

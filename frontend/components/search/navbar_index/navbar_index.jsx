@@ -15,12 +15,12 @@ class NavBarIndex extends React.Component {
     // }
 
     render() {
-        let { openModal, updateFilter, filters } = this.props;
+        let { openModal, updateFilter, filters, currentUser } = this.props;
 
         const loggedInButtons = (
             <div className="nav2-buttons-container">
                 <button className="nav2-button" onClick={this.props.logout}>Logout</button>
-                {/* <button className="nav2-button" onClick={this.handleClick}>Trips</button> */}
+                {/* <div className="welcome-name-guest">Welcome, {currentUser.username}!</div> */}
             </div>
         );
 

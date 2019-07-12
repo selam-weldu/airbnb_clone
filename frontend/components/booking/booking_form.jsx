@@ -50,9 +50,9 @@ class BookingForm extends React.Component {
                 <div className="booking-search-container">
                     <div className="booking-search">
                         <div className="booking-search-head">
-                            <div onClick={this.props.closeModal} className="close-x">&times;</div>
+                            <div onClick={this.props.closeModal} className="closee-x">&times;</div>
                             <div className="booking-head-text">
-                                {/* <span>${this.props.spot.price}/night</span> */}
+                                <span>${this.props.spot.price}/night</span>
                             </div>
 
                             <div className="booking-search-inputs">

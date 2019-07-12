@@ -20,29 +20,29 @@ class SpotMap extends React.Component {
         }
     }
 
-    // registerListeners() {
-    //     google.maps.event.addListener(this.map, 'idle', () => {
-    //         const { north, south, east, west } = this.map.getBounds().toJSON();
-
-    //         let bounds = {
-    //             northEast: { lat: north, lng: east },
-    //             southWest: { lat: south, lng: west }
-    //         };
-
-    //         this.props.updateFilter("bounds", bounds);
-    //     });
-    // }
-
     registerListeners() {
-        this.map.addListener('idle', () => {
-            let { north, south, east, west } = this.map.getBounds().toJSON();
+        google.maps.event.addListener(this.map, 'idle', () => {
+            const { north, south, east, west } = this.map.getBounds().toJSON();
+
             let bounds = {
                 northEast: { lat: north, lng: east },
                 southWest: { lat: south, lng: west }
             };
-            this.props.updateFilter('bounds', bounds);
-        })
+
+            this.props.updateFilter("bounds", bounds);
+        });
     }
+
+    // registerListeners() {
+    //     this.map.addListener('idle', () => {
+    //         let { north, south, east, west } = this.map.getBounds().toJSON();
+    //         let bounds = {
+    //             northEast: { lat: north, lng: east },
+    //             southWest: { lat: south, lng: west }
+    //         };
+    //         this.props.updateFilter('bounds', bounds);
+    //     })
+    // }
 
     renderMap(){
 
@@ -87,8 +87,8 @@ class SpotMap extends React.Component {
     }
 
     componentWillUnmount(){
-        // google.maps.event.clearListeners(this.map,'idle');
-        this.map.event.clearListeners(this.map,'idle');
+        google.maps.event.clearListeners(this.map,'idle');
+        // this.map.event.clearListeners(this.map,'idle');
     }
 
 

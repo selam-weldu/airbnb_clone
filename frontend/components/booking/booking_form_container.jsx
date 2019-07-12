@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 const msp = (state,ownProps) => {
     return ({
         bookings: state.entities.bookings,
-        // spot: state.entities.spots[ownProps.match.params.spotId],
+        spot: state.entities.spots[ownProps.match.params.spotId],
         // spotId: ownProps.location.pathname
         //require login goes here
         formType: 'booking',
@@ -24,4 +24,4 @@ const mdp = dispatch => {
 
 
 
-export default connect(msp, mdp)(BookingForm);
+export default withRouter(connect(msp, mdp)(BookingForm));
