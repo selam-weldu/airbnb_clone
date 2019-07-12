@@ -3,7 +3,7 @@ import { fetchUser } from '../../actions/user_actions';
 import UserShow from './user_show';
 // import { removeBooking } from '../../actions/booking_actions';
 
-const msp = (state, ownProps) => {
+const msp = (state) => {
     const userId = state.session.currentUserId;
     const user = userId ? state.entities.users[userId] : {};
     
