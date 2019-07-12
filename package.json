@@ -11,6 +11,7 @@
     "css-loader": "^3.0.0",
     "moment": "^2.24.0",
     "nuka-carousel": "^4.5.8",
+    "query-string": "^6.8.1",
     "react": "^16.8.6",
     "react-awesome-slider": "^1.0.1",
     "react-datepicker": "^2.8.0",

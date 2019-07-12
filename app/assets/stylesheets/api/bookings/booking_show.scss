@@ -13,11 +13,9 @@
 .profile-pic{
     border-radius: 50%;
     margin: 0 4vw 0 12vw;
-    width: 10vw;
-    height: 10vw;
+    width: 15vw;
+    height: 15vw;
     background-size: cover;
-    -webkit-box-shadow: 1px 2px 6px 0px #24202057;
-    -moz-box-shadow: 1px 2px 6px 0px #24202057;
     box-shadow: 1px 2px 6px 0px #24202057;
 }
 
@@ -56,6 +54,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
 }
 
 .user-show-container{

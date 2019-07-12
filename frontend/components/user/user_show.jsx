@@ -31,7 +31,10 @@ class UserShow extends React.Component {
                 <BookingIndexItem
                     key={booking.id}
                     booking={booking}
-                    spot={spot} />
+                    spot={spot} 
+                    removeBooking={this.props.removeBooking}
+                    fetchUser={this.props.fetchUser}
+                    userId={this.props.userId}/>
             )
 
         });
