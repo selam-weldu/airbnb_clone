@@ -17,6 +17,8 @@ The project was planned and carried out within 10-days. Additional features and 
  * Browse multiple spots through GoogleMaps
  * Book available spots and view your bookings on the user show page
  
+ #
+ 
  
 
 
