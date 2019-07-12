@@ -1,30 +1,3 @@
-// import React from 'react';
-
-// class BookingIndexItem extends React.Component {
-//     constructor(props) {
-//         super(props)
-//     }
-
-
-//     render() {
-//         const { booking, spot } = this.props
-//         return (
-//             <div className='booking-list-items'>
-//                 {booking.checkIn}
-//                 {booking.checkOut}
-//                 {spot.title}
-//                 {/* {spot.location} */}
-//             </div>
-
-//         );
-
-//     };
-
-// };
-
-// export default BookingIndexItem;
-
-
 
 import React from 'react';
 import Carousel from 'nuka-carousel';
@@ -32,10 +5,10 @@ import Carousel from 'nuka-carousel';
 const BookingIndexItem = ({ booking, spot }) => {
 
     return (
-        <div className="spot-index-item">
-                <li className="spot-li">
+        <div className="booking-index-item">
+                <li className="booking-li">
 
-                    <div className="spot-photos">
+                    <div className="booking-photos">
                         <Carousel>
                             <img src={spot.photoUrls[0]} className="spot-photos" />
                             <img src={spot.photoUrls[1]} className="spot-photos" />
@@ -49,26 +22,34 @@ const BookingIndexItem = ({ booking, spot }) => {
                     </div>
 
 
-                    <div className="spot-info">
-                        <div className="spot-short-info">
-                            <span className="plus">PLUS  </span>
-                            <span className="spot-type">  VERIFIED &middot; {spot.listing_type}</span>
+                    <div className="booking-info">
+                        <div className="booking-short-info">
+                            {/* <span className="plus">PLUS  </span> */}
+                        {/* <span className="booking-type">  Check In &middot; &nbsp;{booking.check_in}</span>
+                        <br/>
+                        <span className="booking-type">  Check Out &middot; &nbsp;{booking.check_out}</span> */}
                             <span> <i className="far fa-heart heart"></i></span>
-                            <div className="spot-title">{spot.title}</div>
-                            <div className="spot-details">
+                            <div className="booking-title">{spot.title}</div>
+                            {/* <div className="booking-details">
                                 <span>{spot.num_guests} guests &middot; </span>
                                 <span>Studio &middot; </span>
                                 <span>{spot.num_beds + 1} beds &middot; </span>
                                 <span>{spot.num_baths + 1} baths</span>
-                            </div>
-                            <div className="amenities">
-                                <span>{booking.check_in}</span>
-                                <span>{booking.check_out}</span>
+                            </div> */}
+                            {/* <div className="booking">
+                            <span>Check In &middot; &nbsp;{booking.check_in}</span>
+                                <br/>
+                            <span>Check Out &middot; &nbsp;{booking.check_out}</span>
+                            </div> */}
+
+                            <div className="booking">
+                            <span className="booking-type">  Check In &middot; &nbsp;{booking.check_in}</span>
+                            <br />
+                            <span className="booking-type">  Check Out &middot; &nbsp;{booking.check_out}</span>
                             </div>
                         </div>
-                        <div className="spot-footer-info">
-                            <p>&#9733;4.9({spot.id - 200})</p>
-                            <p>${spot.price}/night</p>
+                        <div className="booking-footer-info">
+                            <p className="p">${spot.price}/night</p>
                         </div>
                     </div>
                 </li>

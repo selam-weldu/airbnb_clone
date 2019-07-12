@@ -5,8 +5,7 @@ import UserShow from './user_show';
 const msp = (state, ownProps) => {
     const userId = state.session.currentUserId;
     const user = userId ? state.entities.users[userId] : {};
-
-    debugger
+    
     return ({
         userId: userId,
         user: user,

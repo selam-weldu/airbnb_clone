@@ -11,7 +11,6 @@ class BookingUser extends React.Component {
                 <img src={this.props.currentUser.photoUrl} className="profile-pic" />
                 <div className="welcome-guest">
                     <div>Hello,demoUser!</div>
-                    <div>Here are your bookings</div>
                 </div> 
             </div>
         )

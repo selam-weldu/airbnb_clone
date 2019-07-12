@@ -1,0 +1,194 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.booking-index-item{
+    padding-left: 8px; 
+    padding-right: 8px; 
+    width: 764px;
+    height: 234px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    display: block;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    background-color: #fff;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.booking-li {
+    display: flex;
+    justify-content: space-between;
+    position: relative ;
+    color: rgb(72, 72, 72) ;
+    height: 100% ;
+    margin-bottom: 4px ;
+    border-width: 1px ;
+    border-style: solid ;
+    border-color: rgb(235, 235, 235) ;
+    border-image: initial ;
+    border-radius: 4px ;
+}
+
+.booking-ul {
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.booking-photos {
+    width: 300px;
+    height: 200px;
+    display: block;
+}
+
+.booking-info {
+    height: 200px;
+    padding: 0px 16px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    background-color: #fff;
+    margin-right: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.booking-short-info {
+    padding-right: 40px;
+    line-height: 1.43;
+    margin-top: 10px;
+}
+
+.plus {
+    font-size: 12px ;
+    line-height: 16px ;
+    letter-spacing: normal ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif ;
+    text-transform: uppercase ;
+    color: white ;
+    display: inline-block ;
+    white-space: nowrap ;
+    padding-left: 5px ;
+    padding-right: 5px ;
+    padding-top: 2px ;
+    padding-bottom: 1px ;
+    border: 1px solid rgb(145, 70, 105);
+    background-color: rgb(145, 70, 105);
+    border-radius: 4px ;
+}
+
+.booking-type {
+    color: rgb(145, 70, 105);
+    overflow-wrap: break-word ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif ;
+    font-size: 12px ;
+    font-weight: 800 ;
+    line-height: 1.33333em ;
+    text-transform: uppercase ;
+        // postion: relative;
+}
+
+.booking-title {
+    line-height: 22px ;
+    overflow-wrap: break-word ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif ;
+    font-size: 18px ;
+    font-weight: 600 ;
+    color: rgb(72, 72, 72) ;
+    -webkit-font-smoothing: antialiased;
+    // margin-top: 5px;
+}
+
+.booking-details .booking {
+    overflow-wrap: break-word ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif ;
+    font-size: 14px ;
+    font-weight: 400 ;
+    line-height: 1.28571em ;
+    color: rgb(72, 72, 72) ;
+}
+
+.booking-footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px;
+    // position: absolute;
+    // right: 10px;
+}
+
+// p:nth-child(1) {
+//     margin: 0px ;
+//     word-wrap: break-word ;
+//     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+//     color: #484848 ;
+//     line-height: normal;
+//     text-overflow: ellipsis;
+//     align-items: center;
+// }
+
+.p {
+    margin: 0px ;
+    word-wrap: break-word ;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+    font-size: 16px ;
+    font-weight: 600 ;
+    line-height: 1.375em ;
+    color: #484848 ;
+}
+
+
+.booking-index-container{
+    position: relative;
+}
+
+ .map-container {
+   width: 900px;
+//    width: 100%;
+   height: 800px;
+}
+
+
+
+ .booking-header {
+    letter-spacing: normal;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    color: #484848;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 800;
+    text-align: left;
+    margin-left: 32px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+ .booking-container{
+    // margin-right: 0;
+    // margin-right: 0;
+    // position: absolute;
+    // top: 100px;
+
+    margin-right: 0;
+    position: absolute;
+    top: 100px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .booking-ul {
+     margin-left: 24px;
+     padding: 0px 0px;
+ }
+
+.heart {
+    position: absolute;
+    right: 10px;
+}
