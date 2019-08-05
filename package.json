@@ -25,7 +25,7 @@
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5",
     "yarn": "^1.16.0",
-      "@babel/plugin-transform-runtime": "^7.5.0"
+    "@babel/plugin-transform-runtime": "^7.5.0"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
