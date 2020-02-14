@@ -24,7 +24,7 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5",
-    "yarn": "^1.16.0",
+    "yarn": "^1.22.0",
     "@babel/plugin-transform-runtime": "^7.5.0"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
