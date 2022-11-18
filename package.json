@@ -23,7 +23,7 @@
     "redux-thunk": "^2.3.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5",
+    "webpack-cli": "^3.3.12",
     "yarn": "^1.16.0",
     "@babel/plugin-transform-runtime": "^7.5.0"
   },
